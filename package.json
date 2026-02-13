@@ -1,5 +1,9 @@
 {
   "name": "munchimapsv2",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "version": "1.0.0",
   "description": "Trying to port MunchiMaps to Vite + React and add databasing with some type of NoSQL method",
   "main": "index.js",
