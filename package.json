@@ -26,5 +26,11 @@
   "homepage": "https://github.com/AliasKugelblitz/MunchiMapsV2#readme",
   "devDependencies": {
     "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
+    "react-leaflet": "^5.0.0-rc.2"
   }
 }

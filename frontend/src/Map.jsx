@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react'
 import './Map.css'
-import "leaflet/dist/leaflet.css";
-
-import { MapContainer, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css"
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import L from 'leaflet'
 
 function Map() {
   const [apiStatus, setApiStatus] = useState('Connecting...');
 
   useEffect(() => {
-    fetch('http://localhost:5000/') // This is your backend server address
+    fetch('http://localhost:5000/') // Backend server address
       .then(res => res.text())
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
   }, []);
+
 
   return (
     <>
@@ -25,6 +26,11 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <Marker position={[42.729014, -73.67628]}>
+            <Popup>
+              Test
+            </Popup>
+          </Marker>
         </MapContainer>
       </div>
     </>
