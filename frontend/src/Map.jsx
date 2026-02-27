@@ -1,11 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './Map.css'
-import "leaflet/dist/leaflet.css";
-
-import { MapContainer, TileLayer } from "react-leaflet";
-import BottomBar from './components/BottomBar'
-import MapControls from './components/MapControls'
-import { UserLocationMarker } from './components/UserLocation'
+import "leaflet/dist/leaflet.css"
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import L from 'leaflet'
 
 function Map() {
   const [apiStatus, setApiStatus] = useState('Connecting...');
@@ -14,7 +11,7 @@ function Map() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/') // This is your backend server address
+    fetch('http://localhost:5000/') // Backend server address
       .then(res => res.text())
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
