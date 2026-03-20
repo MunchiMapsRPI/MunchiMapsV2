@@ -9,6 +9,7 @@ import { UserLocationMarker } from './components/UserLocation'
 
 function Map() {
   const [apiStatus, setApiStatus] = useState('Connecting...');
+  const [vendingMachines, setVendingMachines] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
   const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
@@ -18,6 +19,13 @@ function Map() {
       .then(res => res.text())
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/getImages') // This is your backend server address
+      .then(res => res.json())
+      .then(data => setVendingMachines(data))
+      .catch(err => console.error('Failed to fetch images:', err));
   }, []);
 
   // Get user's location
