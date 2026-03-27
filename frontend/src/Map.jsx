@@ -22,10 +22,10 @@ function Map() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5000/getImages') // This is your backend server address
+    fetch('http://localhost:5000/getInfo') // This is your backend server address
       .then(res => res.json())
       .then(data => setVendingMachines(data))
-      .catch(err => console.error('Failed to fetch images:', err));
+      .catch(err => console.error('Failed to fetch info:', err));
   }, []);
 
   // Get user's location

@@ -22,13 +22,13 @@ app.get('/', (req, res) => {
   res.send('API Server Running');
 })
 
-app.get('/getMachines', async (req, res) => {
+app.get('/getInfo', async (req, res) => {
   try {
-    const machines = await RPIModel.find();
-    res.json(machines);
+    const info = await RPIModel.find();
+    res.json(info);
   } catch (err) {
-    console.error('Error fetching machines:', err);
-    res.status(500).json({ error: 'Failed to fetch machines' });
+    console.error('Error fetching info:', err);
+    res.status(500).json({ error: 'Failed to fetch info' });
   }
 })
 
