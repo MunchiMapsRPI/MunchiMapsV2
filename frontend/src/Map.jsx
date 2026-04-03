@@ -6,6 +6,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import BottomBar from './components/BottomBar'
 import MapControls from './components/MapControls'
 import { UserLocationMarker } from './components/UserLocation'
+import VendingMachineMarker from './components/Marker';
 
 function Map() {
   const [apiStatus, setApiStatus] = useState('Connecting...');
@@ -97,6 +98,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <UserLocationMarker userLocation={userLocation} />
+          <VendingMachineMarker machineType="food&drink" position={[42.729014, -73.676728]} />
         </MapContainer>
       </div>
       <BottomBar 
