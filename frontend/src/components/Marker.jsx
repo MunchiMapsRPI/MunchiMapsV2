@@ -21,7 +21,7 @@ const foodAndDrinkIcon = L.icon({
     iconUrl: '/icons/Map Icons/Food&Drink.png',
     iconSize: [80, 50],
     iconAnchor: [40, 50],
-    popupAnchor: [0, -50]
+    popupAnchor: [0, -40]
 });
 
 export function VendingMachineMarker({ machineType, position }) {
