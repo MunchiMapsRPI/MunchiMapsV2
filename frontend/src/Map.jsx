@@ -98,7 +98,13 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <UserLocationMarker userLocation={userLocation} />
-          <VendingMachineMarker machineType="food&drink" position={[42.729014, -73.676728]} />
+          {vendingMachines.map((machine, index) => (
+            <VendingMachineMarker 
+              key={machine._id || index}
+              machineType={machine.type || 'food&drink'}
+              position={[machine.latitude, machine.longitude]}
+            />
+          ))}
         </MapContainer>
       </div>
       <BottomBar 
