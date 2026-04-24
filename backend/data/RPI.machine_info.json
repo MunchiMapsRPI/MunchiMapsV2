@@ -1,0 +1,592 @@
+[{
+  "_id": {
+    "$oid": "698f9414bf1ed459e6019551"
+  },
+  "location": {
+    "building": "Folsom Library",
+    "directions": "4th floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72954131606436,
+        -73.68250278794625
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": "Pays back in $5 bills"
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibraryDrink1.jpg",
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibraryDrink2.jpg",
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibrarySnack1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e7e2a5a4b8a94a89628526"
+  },
+  "location": {
+    "building": "Academy Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72749913373329,
+        -73.67858048827672
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": "Pays back in $5 bills"
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Academy%20Hall/AcademyHallDrink1.jpg",
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Academy%20Hall/AcademyHallSnack1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e7e5b7a4b8a94a89628527"
+  },
+  "location": {
+    "building": "Amos Eaton",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73028732334645,
+        -73.68258918979996
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbb131206f9199731b248"
+  },
+  "location": {
+    "building": "Davison Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72731130298223,
+        -73.67414636096385
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbba61206f9199731b249"
+  },
+  "location": {
+    "building": "DCC",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72934781129576,
+        -73.67895862471251
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbbe21206f9199731b24a"
+  },
+  "location": {
+    "building": "Greene Building",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73022009495838,
+        -73.68115317445492
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbc091206f9199731b24b"
+  },
+  "location": {
+    "building": "JEC",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72984767715344,
+        -73.68020218979997
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbc4c1206f9199731b24c"
+  },
+  "location": {
+    "building": "JROWL",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72900301770575,
+        -73.68045377630875
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbd6e1206f9199731b24d"
+  },
+  "location": {
+    "building": "Mueller Center",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72891902003062,
+        -73.67684441122128
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbdad1206f9199731b24e"
+  },
+  "location": {
+    "building": "North Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73142413669011,
+        -73.67987080514486
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbe3c1206f9199731b24f"
+  },
+  "location": {
+    "building": "Pittsburgh Building",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73125174093247,
+        -73.68330210329108
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbe741206f9199731b250"
+  },
+  "location": {
+    "building": "PubSafe",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72930295751444,
+        -73.67676008238502
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbf6a1206f9199731b251"
+  },
+  "location": {
+    "building": "Quad",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73070604176458,
+        -73.67756264747236
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebbfcd1206f9199731b252"
+  },
+  "location": {
+    "building": "Sage Labs",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73097906477598,
+        -73.68164141863616
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebc0041206f9199731b253"
+  },
+  "location": {
+    "building": "Sharp Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72711006590162,
+        -73.67448712656643
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebc1341206f9199731b254"
+  },
+  "location": {
+    "building": "Union",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.7301597619789,
+        -73.67663391678252
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebc1a11206f9199731b255"
+  },
+  "location": {
+    "building": "VCC",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72931448709032,
+        -73.68164350143745
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebc1db1206f9199731b256"
+  },
+  "location": {
+    "building": "Warren Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72809422047715,
+        -73.67536297260132
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69ebc2021206f9199731b257"
+  },
+  "location": {
+    "building": "West Hall",
+    "directions": "1st floor",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73180780158587,
+        -73.68320404747236
+      ]
+    }
+  },
+  "payment": {
+    "accepts": [
+      "Cash",
+      "Card",
+      "Flex",
+      "Coins"
+    ],
+    "info": ""
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "working": true,
+  "images": [
+    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  ]
+}]
