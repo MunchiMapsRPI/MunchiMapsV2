@@ -99,10 +99,11 @@ function Map() {
           />
           <UserLocationMarker userLocation={userLocation} />
           {vendingMachines.map((machine, index) => (
-            <VendingMachineMarker 
-              key={machine._id || index}
-              machineType={machine.type || 'food&drink'}
-              position={[machine.latitude, machine.longitude]}
+            <VendingMachineMarker
+              key={index}
+              machineType={machine.contents}
+              position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
+              name={machine.location.building}
             />
           ))}
         </MapContainer>

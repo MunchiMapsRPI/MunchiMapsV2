@@ -4,17 +4,17 @@ import L from 'leaflet';
 
 // Create custom markers
 const drinkIcon = L.icon({
-    iconUrl: '../assets/icons/Drink.png',
-    iconSize: [32, 32],
-    iconAnchor: [16, 16],
-    popupAnchor: [0, -16]
+    iconUrl: '/icons/Map Icons/Drink.png',
+    iconSize: [50, 50],
+    iconAnchor: [25, 25],
+    popupAnchor: [0, -25]
 });
 
 const foodIcon = L.icon({
-    iconUrl: '../assets/icons/Food.png',
-    iconSize: [32, 32],
-    iconAnchor: [16, 16],
-    popupAnchor: [0, -16]
+    iconUrl: '/icons/Map Icons/Food.png',
+    iconSize: [50, 50],
+    iconAnchor: [25, 25],
+    popupAnchor: [0, -25]
 });
 
 const foodAndDrinkIcon = L.icon({
@@ -24,7 +24,7 @@ const foodAndDrinkIcon = L.icon({
     popupAnchor: [0, -40]
 });
 
-export function VendingMachineMarker({ machineType, position }) {
+export function VendingMachineMarker({ machineType, position, name }) {
     if (!position) return null;
 
     return (
@@ -35,7 +35,7 @@ export function VendingMachineMarker({ machineType, position }) {
         }>
             <Popup>
                 <div>
-                    <h3>{machineType === 'drink' ? 'Drink Vending Machine' : machineType === 'food' ? 'Food Vending Machine' : 'Food & Drink Vending Machine'}</h3>
+                    <h3>{name || (machineType === 'drink' ? 'Drink Vending Machine' : machineType === 'food' ? 'Food Vending Machine' : 'Food & Drink Vending Machine')}</h3>
                     <p>Location: {position[0].toFixed(4)}, {position[1].toFixed(4)}</p>
                 </div>
             </Popup>
