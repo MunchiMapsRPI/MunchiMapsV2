@@ -6,15 +6,15 @@ import L from 'leaflet';
 const drinkIcon = L.icon({
     iconUrl: '/icons/Map Icons/Drink.png',
     iconSize: [50, 50],
-    iconAnchor: [25, 25],
-    popupAnchor: [0, -25]
+    iconAnchor: [25, 50],
+    popupAnchor: [0, -40]
 });
 
 const foodIcon = L.icon({
     iconUrl: '/icons/Map Icons/Food.png',
     iconSize: [50, 50],
-    iconAnchor: [25, 25],
-    popupAnchor: [0, -25]
+    iconAnchor: [25, 50],
+    popupAnchor: [0, -40]
 });
 
 const foodAndDrinkIcon = L.icon({
@@ -24,7 +24,7 @@ const foodAndDrinkIcon = L.icon({
     popupAnchor: [0, -40]
 });
 
-export function VendingMachineMarker({ machineType, position, name }) {
+export function VendingMachineMarker({ machineType, position, name, imageUrls }) {
     if (!position) return null;
 
     return (
@@ -37,6 +37,7 @@ export function VendingMachineMarker({ machineType, position, name }) {
                 <div>
                     <h3>{name || (machineType === 'drink' ? 'Drink Vending Machine' : machineType === 'food' ? 'Food Vending Machine' : 'Food & Drink Vending Machine')}</h3>
                     <p>Location: {position[0].toFixed(4)}, {position[1].toFixed(4)}</p>
+                    {imageUrls[0] && <img src={imageUrls[0]} alt={imageUrls[0]} style={{ width: '100%' }} />}
                 </div>
             </Popup>
         </Marker>

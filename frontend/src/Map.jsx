@@ -104,6 +104,7 @@ function Map() {
               machineType={machine.contents}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
+              imageUrls={machine.images} // Assuming you want to display the first image
             />
           ))}
         </MapContainer>
