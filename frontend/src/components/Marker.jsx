@@ -32,7 +32,6 @@ export function VendingMachineMarker({
   machines,
 }) {
   if (!position) return null;
-  console.log('Machines:', machines[0].image);
   return (
     <Marker
       position={position}
@@ -57,15 +56,6 @@ export function VendingMachineMarker({
                   : "Food & Drink Vending Machine")}
           </h3>
           <p>
-            {images.length > 0 ? (
-              <img
-                src={images[0]}
-                alt={images[0]}
-                style={{ width: "100%" }}
-              />
-            ) : (
-              "No image available"
-            )}
           </p>
         </div>
       </Popup>
