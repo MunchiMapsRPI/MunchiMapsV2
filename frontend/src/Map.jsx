@@ -101,10 +101,10 @@ function Map() {
           {vendingMachines.map((machine, index) => (
             <VendingMachineMarker
               key={index}
-              machineType={machine.contents}
+              machineTypes={machine.contents}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
-              imageUrls={machine.images} // Assuming you want to display the first image
+              machines={machine.machines} // Assuming you want to display the first image
             />
           ))}
         </MapContainer>

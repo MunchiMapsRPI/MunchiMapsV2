@@ -33,6 +33,7 @@
     "plugin-react": "^0.0.1-security",
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
+    "react-error-boundary": "^6.1.6",
     "react-leaflet": "^5.0.0-rc.2",
     "rollup": "^4.59.0",
     "setprototypeof": "^1.2.0",

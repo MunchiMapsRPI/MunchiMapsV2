@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Marker, Popup } from "react-leaflet";
+import { ErrorBoundary, getErrorMessage } from "react-error-boundary";
 import L from "leaflet";
 
 // Create custom markers
@@ -25,22 +26,22 @@ const foodAndDrinkIcon = L.icon({
 });
 
 export function VendingMachineMarker({
-  machineType,
+  machineTypes,
   position,
   name,
-  //imageUrls,
+  machines,
 }) {
   if (!position) return null;
-
+  console.log('Machines:', machines[0].image);
   return (
     <Marker
       position={position}
       icon={
-        machineType === "drink"
+        machineTypes === "drink"
           ? drinkIcon
-          : machineType === "food"
+          : machineTypes === "food"
             ? foodIcon
-            : machineType === "food&drink"
+            : machineTypes === "food&drink"
               ? foodAndDrinkIcon
               : null
       }
@@ -49,21 +50,23 @@ export function VendingMachineMarker({
         <div>
           <h3>
             {name ||
-              (machineType === "drink"
+              (machineTypes === "drink"
                 ? "Drink Vending Machine"
-                : machineType === "food"
+                : machineTypes === "food"
                   ? "Food Vending Machine"
                   : "Food & Drink Vending Machine")}
           </h3>
           <p>
+            {images.length > 0 ? (
+              <img
+                src={images[0]}
+                alt={images[0]}
+                style={{ width: "100%" }}
+              />
+            ) : (
+              "No image available"
+            )}
           </p>
-          {/* {imageUrls[0] && (
-            <img
-              src={imageUrls[0]}
-              alt={imageUrls[0]}
-              style={{ width: "100%" }}
-            />
-          )} */}
         </div>
       </Popup>
     </Marker>
