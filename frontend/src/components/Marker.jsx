@@ -28,7 +28,7 @@ export function VendingMachineMarker({
   machineType,
   position,
   name,
-  imageUrls,
+  //imageUrls,
 }) {
   if (!position) return null;
 
@@ -57,13 +57,13 @@ export function VendingMachineMarker({
           </h3>
           <p>
           </p>
-          {imageUrls[0] && (
+          {/* {imageUrls[0] && (
             <img
               src={imageUrls[0]}
               alt={imageUrls[0]}
               style={{ width: "100%" }}
             />
-          )}
+          )} */}
         </div>
       </Popup>
     </Marker>
