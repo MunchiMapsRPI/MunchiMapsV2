@@ -42,14 +42,6 @@ function BottomBar({ onSearch, onReport, onRecenter }) {
       )}
 
       <button 
-        className="bar-button report-button"
-        onClick={onReport}
-        title="Report a vending machine"
-      >
-        <img src="/icons/MenuIcons/alert-triangle.svg" alt="Report" className="button-icon" />
-      </button>
-
-      <button 
         className="bar-button recenter-button"
         onClick={onRecenter}
         title="Recenter to your location"
