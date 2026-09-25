@@ -190,6 +190,147 @@
             "stocked": true,
             "price": 3.5
           }
+        ],
+        [
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Zero Sugar",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Zero Sugar",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Diet",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Diet",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Starry",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Starry",
+            "stocked": true,
+            "price": 2.5
+          }
+        ],
+        [
+          {
+            "name": "Mountain Dew",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Mountain Dew",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Schweppes Ginger Ale",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Schweppes Ginger Ale",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Dole Strawberry Lemonade",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Dole Strawberry Lemonade",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          }
+        ],
+        [
+          {
+            "name": "LIFEWTR",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "LIFEWTR",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Still Water",
+            "stocked": true,
+            "price": 3
+          },
+          {
+            "name": "Aquafina Purified Still Water",
+            "stocked": true,
+            "price": 3
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          }
         ]
       ]
     }
