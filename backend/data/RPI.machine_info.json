@@ -13,22 +13,23 @@
       ]
     }
   },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": "Pays back in $5 bills"
-  },
   "contents": "food&drink",
   "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibraryDrink1.jpg",
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibraryDrink2.jpg",
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Folsom%20Library/FolsomLibrarySnack1.jpg"
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "Coins"
+        ],
+        "info": "Pays back in $5 bills"
+      },
+      "contents": "drink",
+      "working": true,
+      "image": ""
+    }
   ]
 },
 {
@@ -69,29 +70,129 @@
   },
   "location": {
     "building": "Amos Eaton",
-    "directions": "1st floor",
+    "directions": "1st floor directly in front of east door",
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.73028732334645,
-        -73.68258918979996
+        42.730124,
+        -73.682406
       ]
     }
   },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
   "contents": "drink",
   "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "",
+      "category": "drink",
+      "contents": [
+        [
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks DoubleShot Mocha",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks DoubleShot Mocha",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Rockstar Punched Fruit Puncher",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Rockstar Punched Fruit Puncher",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "",
+            "stocked": false,
+            "price": null
+          },
+          {
+            "name": "Celsius Live Fit Sparking Orange",
+            "stocked": true,
+            "price": 3.5
+          }
+        ],
+        [
+          {
+            "name": "Pure Leaf Real Brewed Tea Lemon",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Lemon",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Raspberry",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Raspberry",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Dole Apple Juice",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Dole Apple Juice",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          }
+        ]
+      ]
+    }
   ]
 },
 {
