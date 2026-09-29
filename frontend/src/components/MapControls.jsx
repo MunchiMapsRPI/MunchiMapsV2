@@ -62,8 +62,24 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
                 <span>Building Closed</span>
               </div>
               <div className="legend-item">
-                <img src="/icons/Map Icons/SelfLocation.png" alt="Your Location" className="legend-marker marker-user" />
+                <img src="/icons/Map Icons/SelfLocation.png" alt="User Location" className="legend-marker marker-user" />
                 <span>Your Location</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/MenuIcons/search.svg" alt="Search Icon" className="legend-marker" />
+                <span>Search</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/MenuIcons/crosshair.svg" alt="Recenter Icon" className="legend-marker" />
+                <span>Recenter Map</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/Map Icons/CookieFull.png" alt="Legend Icon" className="legend-marker" />
+                <span>Map Legend</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/MenuIcons/help-circle.svg" alt="Help Icon" className="legend-marker" />
+                <span>How to Use MunchiMaps</span>
               </div>
             </div>
           </div>
