@@ -77,7 +77,8 @@
         42.730124,
         -73.682406
       ]
-    }
+    },
+    "disabled_directions": "1st floor directly in front of east door"
   },
   "contents": "drink",
   "access": "RPI ID",
