@@ -67,7 +67,6 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
               <h3>Getting Started</h3>
               <ul>
                 <li><strong>Search:</strong> Click the search button to search for vending machines</li>
-                <li><strong>Report:</strong> Click the alert button to report a new vending machine or update info</li>
                 <li><strong>Recenter:</strong> Click the crosshair button to center the map on your location</li>
               </ul>
               <h3>Navigation</h3>
