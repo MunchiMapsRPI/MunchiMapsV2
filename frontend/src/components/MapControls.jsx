@@ -42,15 +42,27 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
             <button className="close-button" onClick={handleMapKeyClick}>×</button>
             <div className="legend-items">
               <div className="legend-item">
-                <img src="/icons/Map Icons/Food&Drink.png" alt="Vending Machine" className="legend-marker marker-vending" />
-                <span>Vending Machine</span>
+                <img src="/icons/Map Icons/Drink.png" alt="Drink Vending Machines" className="legend-marker marker-vending" />
+                <span>Drink Vending Machines</span>
               </div>
               <div className="legend-item">
-                <img src="/icons/Map Icons/Food&DrinkWarning.png" alt="Limited Stock" className="legend-marker marker-warning" />
-                <span>Limited Stock</span>
+                <img src="/icons/Map Icons/Food.png" alt="Food Vending Machines" className="legend-marker marker-vending" />
+                <span>Food Vending Machines</span>
               </div>
               <div className="legend-item">
-                <span className="legend-marker marker-user">📍</span>
+                <img src="/icons/Map Icons/Food&Drink.png" alt="Food and Drink Vending Machines" className="legend-marker marker-vending" />
+                <span>Food and Drink Vending Machines</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/Map Icons/Food&DrinkWarning.png" alt="Problem with vending machine" className="legend-marker marker-warning" />
+                <span>Problem with vending machine</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/Map Icons/Food&DrinkClosed.png" alt="Building Closed" className="legend-marker marker-warning" />
+                <span>Building Closed</span>
+              </div>
+              <div className="legend-item">
+                <img src="/icons/Map Icons/SelfLocation.png" alt="Your Location" className="legend-marker marker-user" />
                 <span>Your Location</span>
               </div>
             </div>
