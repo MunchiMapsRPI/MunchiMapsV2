@@ -97,7 +97,7 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
                 <li><strong>Search:</strong> Click the search button to search for vending machines</li>
                 <li><strong>Recenter:</strong> Click the crosshair button to center the map on your location</li>
               </ul>
-              <h3>Navigation (Desktop)</h3>
+              <h3>Navigation (PC)</h3>
               <ul>
                 <li><strong>Pan:</strong> Click and drag the map to move around</li>
                 <li><strong>Zoom:</strong> Scroll to zoom in or out</li>
