@@ -78,7 +78,37 @@
         -73.682406
       ]
     },
-    "disabled_directions": "1st floor directly in front of east door"
+    "disabled_directions": "1st floor directly in front of east door",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "7:00",
+        "22:00"
+      ],
+      [
+        "7:00",
+        "22:00"
+      ],
+      [
+        "7:00",
+        "22:00"
+      ],
+      [
+        "7:00",
+        "22:00"
+      ],
+      [
+        "7:00",
+        "22:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
   },
   "contents": "drink",
   "access": "RPI ID",
@@ -597,37 +627,6 @@
       "coordinates": [
         42.72930295751444,
         -73.67676008238502
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbf6a1206f9199731b251"
-  },
-  "location": {
-    "building": "Quad",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.73070604176458,
-        -73.67756264747236
       ]
     }
   },
