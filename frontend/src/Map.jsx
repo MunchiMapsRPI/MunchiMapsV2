@@ -70,7 +70,8 @@ function Map() {
   };
 
   const handleRecenter = () => {
-    if (userLocation) {
+    if (userLocation && mapRef.current) {
+      mapRef.current.flyTo(userLocation, 18);
       setMapCenter(userLocation);
       console.log('Recentering to:', userLocation);
     } else {
