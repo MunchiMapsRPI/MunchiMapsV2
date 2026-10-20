@@ -1,41 +1,82 @@
-# Munchi Maps Report Workflow
+# Munchi Maps Report Function
 
 ## Purpose
 
-Provide a simple way for users to report an issue with a vending machine on or around the RPI campus.
+Allow users to report current problems with vending machines so the map can show
+temporary warnings and the Munchi Maps team can correct machine information.
 
-## Basic Workflow
+## What Can Be Reported
 
-1. The user scans a QR code connected to Munchi Maps.
-2. The report page opens in a mobile browser.
-3. The user selects the building.
-4. The user selects the vending machine, using an image or other identifying information.
-5. The user selects the issue from a dropdown.
-6. The user adds any additional details in a text box.
-7. The user submits the report.
-8. Munchi Maps confirms that the report was received.
-
-## Report Selection
-
-Possible report types include:
+Users can report:
 
 - Machine is out of order.
-- Machine is empty.
-- Machine is missing.
-- Machine is in the wrong location.
-- Machine is inaccessible.
-- Other.
+- Machine is empty or out of stock.
+- Other relevant issue.
 
-The final list of report types can be adjusted as the feature is developed.
+Reports should describe something the user observed. The `Other` option should
+include a short description.
 
-## Report Information
+## How Users Start a Report
 
-The report should be connected to the selected building and vending machine. The user may also provide a description to explain the issue or add context.
+Each vending-machine marker popup should include a **Report an issue** button.
+The selected machine should already be attached to the report so the user does
+not have to select it again.
 
-The report page should make it clear which vending machine has been selected before the report is submitted.
+A QR code may also be placed near each machine. The QR code should open the
+report form. 
 
-## QR Code
+## Report Popup
 
-The QR code should open the report page directly on a mobile device. It may be placed near a vending machine or in a building.
+The report should open in a popup or modal over the map. It should show:
 
-Whether each machine receives its own QR code or all QR codes open the same selection page is still undecided.
+- The building and vending-machine picture.
+- A required issue selection.
+- An optional description field.
+- A submit button.
+- A cancel or close button.
+
+The description should be required for the `Other` option. After submission,
+the user should see a confirmation that the report was received. If submission
+fails, the user should be told that the report was not submitted and be allowed
+to try again.
+
+## Effect on the Website
+
+Reports should be temporary rather than permanent machine data.
+
+- A single report can be recorded without immediately changing the marker.
+- Multiple recent reports for the same issue can display a warning on the
+  machine marker and in its popup.
+- The warning should use wording such as `Reported issue` rather than claiming
+  the machine is definitely broken.
+
+The exact number of reports needed to display a warning can be adjusted as the
+feature is tested. The threshold should be consistent across the website.
+
+## Report Expiration
+
+Reports should expire after a period of time so old problems do not remain on
+the map. A starting rule is:
+
+- General machine problems expire after 24 hours.
+
+When all relevant reports expire or are resolved, the machine warning should be
+removed.
+
+## Duplicate and Invalid Reports
+
+The system should avoid repeated reports for the same machine and issue from the
+same user within a short period. It should also reject reports for machines
+that no longer exist and prevent users from submitting an empty issue type.
+
+## Review and Resolution
+
+Reports should be available for review by the Munchi Maps team. A report can be
+marked as resolved or dismissed. Resolving a report removes it from the active
+warning calculation.
+
+## Initial QR Code Decision
+
+The preferred approach is one QR code per vending machine. Each QR code opens
+the report form with the correct machine preselected, reducing user selection
+errors.
