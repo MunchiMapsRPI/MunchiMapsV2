@@ -70,7 +70,8 @@ function Map() {
   };
 
   const handleRecenter = () => {
-    if (userLocation) {
+    if (userLocation && mapRef.current) {
+      mapRef.current.flyTo(userLocation, 18);
       setMapCenter(userLocation);
       console.log('Recentering to:', userLocation);
     } else {
@@ -105,6 +106,7 @@ function Map() {
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
               machines={machine.machines} // Assuming you want to display the first image
+              openingTimes={machine.location.opening_times}
             />
           ))}
         </MapContainer>
