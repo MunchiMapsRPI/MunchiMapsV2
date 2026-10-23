@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './Map.css'
 import "leaflet/dist/leaflet.css";
 
@@ -87,6 +87,22 @@ function Map() {
     console.log('Help clicked');
   };
 
+  const nearbyCandidates = useMemo(
+  () =>
+    vendingMachines
+      .filter((m) => m.location?.geolocation?.coordinates)
+      .map((m) => ({
+        id: m._id,
+        name: m.location.building,
+        position: [
+          m.location.geolocation.coordinates[0],
+          m.location.geolocation.coordinates[1],
+        ],
+        openingTimes: m.location.opening_times,
+      })),
+    [vendingMachines]
+  );
+
   return (
     <>
       <div className="logo-title">
@@ -98,7 +114,7 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <UserLocationMarker userLocation={userLocation} />
+          <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} />
           {vendingMachines.map((machine, index) => (
             <VendingMachineMarker
               key={index}
