@@ -14,6 +14,11 @@ function Map() {
   const [userLocation, setUserLocation] = useState(null);
   const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
+  const buildings = [...new Set(
+    vendingMachines
+      .map((machine) => machine.location?.building)
+      .filter(Boolean),
+  )];
 
   useEffect(() => {
     fetch('http://localhost:5000/') // This is your backend server address
@@ -115,6 +120,7 @@ function Map() {
         onSearch={handleSearch}
         onReport={handleReport}
         onRecenter={handleRecenter}
+        buildings={buildings}
       />
       <MapControls 
         onMapKeyClick={handleMapKeyClick}
