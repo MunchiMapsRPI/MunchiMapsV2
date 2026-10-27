@@ -81,7 +81,6 @@ export function VendingMachineMarker({
   name,
   openingTimes,
   markerRefs
-  markerRef,
 }) {
   if (!position) return null;
   
@@ -104,7 +103,6 @@ export function VendingMachineMarker({
         if (el) markerRefs.current[id] = el;
         else delete markerRefs.current[id];
       }}
-      ref={markerRef}
     >
       <Popup>
         <div>

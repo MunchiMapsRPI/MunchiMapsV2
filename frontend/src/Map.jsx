@@ -20,7 +20,6 @@ function Map() {
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
   }, []);
-  const markerRefs = useRef(new globalThis.Map());
   const buildings = [...new Set(
     vendingMachines
       .map((machine) => machine.location?.building)
