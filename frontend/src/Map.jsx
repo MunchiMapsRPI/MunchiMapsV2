@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './Map.css'
 import "leaflet/dist/leaflet.css";
 
@@ -12,7 +12,14 @@ function Map() {
   const [vendingMachines, setVendingMachines] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
   const mapRef = useRef(null);
-  const markerRefs = useRef(new globalThis.Map());
+  const markerRefs = useRef({}); // Store references to markers
+
+  useEffect(() => {
+    fetch('http://localhost:5000/') // This is your backend server address
+      .then(res => res.text())
+      .then(data => setApiStatus(data))
+      .catch(err => setApiStatus('Connection failed: ' + err.message));
+  }, []);
   const buildings = [...new Set(
     vendingMachines
       .map((machine) => machine.location?.building)
@@ -87,6 +94,22 @@ function Map() {
     console.log('Help clicked');
   };
 
+  const nearbyCandidates = useMemo(
+  () =>
+    vendingMachines
+      .filter((m) => m.location?.geolocation?.coordinates)
+      .map((m) => ({
+        id: m._id,
+        name: m.location.building,
+        position: [
+          m.location.geolocation.coordinates[0],
+          m.location.geolocation.coordinates[1],
+        ],
+        openingTimes: m.location.opening_times,
+      })),
+    [vendingMachines]
+  );
+
   return (
     <>
       <div className="logo-title">
@@ -98,11 +121,13 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <UserLocationMarker userLocation={userLocation} />
+          <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} mapRef={mapRef} markerRefs={markerRefs} />
           {vendingMachines.map((machine, index) => (
             <VendingMachineMarker
-              key={index}
+              key={machine._id ?? index}
+              id={machine._id}
               machineTypes={machine.contents}
+              markerRefs={markerRefs}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
               openingTimes={machine.location.opening_times}
