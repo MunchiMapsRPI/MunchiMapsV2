@@ -29,79 +29,55 @@ const foodAndDrinkIcon = L.icon({
 // Function for populating with images and the slider
 function VendingMachineSlider({ machines }) {
   const [index, setIndex] = useState(0);
-  const [imageFailed, setImageFailed] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false); // Shows if the image is broken (set to false automatically)
 
+  // Runs everytime index changes
   useEffect(() => {
     setImageFailed(false);
   }, [index]);
 
+  // If there is no array, empty, or doesnt exist
   if (!Array.isArray(machines) || machines.length === 0) {
-    return console.error("Vending machine failed to load");
+    return <p>Vending machine info not available</p>;
   }
 
-  const machine = machines[index];
-  const count = machines.length;
+  const machine = machines[index]; // Machine that is selected
+  const count = machines.length; // Total number of machines
 
   const IMAGE_WIDTH = 200;               // image size
-  const arrowSize = IMAGE_WIDTH * 0.30;  // scalable arrow size
+  const arrowSize = IMAGE_WIDTH * 0.40;  // scalable arrow size
 
   const arrowStyle = { // styles the arrow
     flexShrink: 0,
     width: arrowSize,
     height: arrowSize,
-    borderRadius: "50%",
-    border: "1px solid #ddd",
-    background: "#f5f5f5",
-    color: "#333",
-    fontSize: arrowSize * 0.7,
+    fontSize: arrowSize * 0.5,
     lineHeight: 1,
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: 0,
-    paddingBottom: arrowSize * 0.08, 
     cursor: "pointer",
+    outline: "none"
   };
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: arrowSize * 0.25,
-        margin: "10px 0",
-      }}
-    >
-      {count > 1 && ( // If machine > 1
-        <button
-          aria-label="Previous machine"
-          onClick={() => setIndex((index - 1 + count) % count)}
-          style={arrowStyle}
-        >
-          ‹
-        </button>
-      )}
+  
 
-      {machine.image && !imageFailed ? (
+  return (
+    <div>
+      {machine.image && !imageFailed ? ( // Shows the image
         <img
           src={machine.image}
           alt={machine.category}
           onError={() => setImageFailed(true)}
-          style={{ width: IMAGE_WIDTH, display: "block", borderRadius: 6 }}
-        />
+          style={{ width : IMAGE_WIDTH,  margin: "30px 0"}}
+        />  
       ) : (
-        <p style={{ width: IMAGE_WIDTH, textAlign: "center" }}>Image not available</p>
+        <p>Image not available</p> // If image failed
       )}
-
-      {count > 1 && ( // If machine > 1
-        <button
-          aria-label="Next machine"
-          onClick={() => setIndex((index + 1) % count)}
-          style={arrowStyle}
-        >
-          ›
-        </button>
+      {count > 1 && ( // For more than one image
+        <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+          <button style={arrowStyle} onClick={() => setIndex((index - 1 + count) % count)}>◀</button> 
+          <button style={arrowStyle} onClick={() => setIndex((index + 1) % count)}>▶</button>
+        </div>
       )}
     </div>
   );
@@ -128,7 +104,7 @@ export function VendingMachineMarker({
       }
     >
       <Popup>
-        <div>
+        <div style={{ caretColor: "transparent" }}>
           <h3>
             {name ||
               (machineTypes === "drink"
@@ -137,8 +113,6 @@ export function VendingMachineMarker({
                   ? "Food Vending Machine"
                   : "Food & Drink Vending Machine")}
           </h3>
-          <p>
-          </p>
           <VendingMachineSlider machines ={machines} />
         </div>
       </Popup>
