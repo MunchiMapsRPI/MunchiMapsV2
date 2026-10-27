@@ -9,10 +9,8 @@ import { UserLocationMarker } from './components/UserLocation'
 import VendingMachineMarker from './components/Marker';
 
 function Map() {
-  const [apiStatus, setApiStatus] = useState('Connecting...');
   const [vendingMachines, setVendingMachines] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
-  const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
   const markerRefs = useRef(new globalThis.Map());
   const buildings = [...new Set(
@@ -20,13 +18,6 @@ function Map() {
       .map((machine) => machine.location?.building)
       .filter(Boolean),
   )];
-
-  useEffect(() => {
-    fetch('http://localhost:5000/') // This is your backend server address
-      .then(res => res.text())
-      .then(data => setApiStatus(data))
-      .catch(err => setApiStatus('Connection failed: ' + err.message));
-  }, []);
 
   useEffect(() => {
     fetch('http://localhost:5000/getInfo') // This is your backend server address
@@ -42,8 +33,6 @@ function Map() {
         (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation([latitude, longitude]);
-          // Optionally center map on user location
-          // setMapCenter([latitude, longitude]);
         },
         (error) => {
           console.error('Error getting location:', error);
@@ -84,7 +73,6 @@ function Map() {
   const handleRecenter = () => {
     if (userLocation && mapRef.current) {
       mapRef.current.flyTo(userLocation, 18);
-      setMapCenter(userLocation);
       console.log('Recentering to:', userLocation);
     } else {
       console.log('User location not available');
@@ -105,7 +93,7 @@ function Map() {
         <img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/MunchiMaps%20Logos/MunchiMapsCroppedLogo.png?raw=true" alt="MunchiMaps" />
       </div>
       <div id="map-container">
-        <MapContainer ref={mapRef} center={mapCenter} zoom={15} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
+        <MapContainer ref={mapRef} center={[42.729014, -73.676728]} zoom={15} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -117,7 +105,6 @@ function Map() {
               machineTypes={machine.contents}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
-              machines={machine.machines} // Assuming you want to display the first image
               openingTimes={machine.location.opening_times}
               markerRef={(marker) => {
                 if (marker) {
