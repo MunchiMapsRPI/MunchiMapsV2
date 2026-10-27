@@ -96,7 +96,7 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
               <ul>
                 <li><strong>Search:</strong> Click the search button to search for vending machines</li>
                 <li><strong>Recenter:</strong> Click the crosshair button to center the map on your location</li>
-                <li><strong>Proximity:</strong> Click the blue marker to find the three nearest open vending machines to your location</li>
+                <li><strong>Proximity:</strong> Click the blue dot to find the three nearest open vending machines to your location</li>
               </ul>
               <h3>Navigation (PC)</h3>
               <ul>

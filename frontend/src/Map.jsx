@@ -14,6 +14,7 @@ function Map() {
   const [userLocation, setUserLocation] = useState(null);
   const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
+  const markerRefs = useRef({}); // Store references to markers
 
   useEffect(() => {
     fetch('http://localhost:5000/') // This is your backend server address
@@ -114,11 +115,13 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} />
+          <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} mapRef={mapRef} markerRefs={markerRefs} />
           {vendingMachines.map((machine, index) => (
             <VendingMachineMarker
-              key={index}
+              key={machine._id ?? index}
+              id={machine._id}
               machineTypes={machine.contents}
+              markerRefs={markerRefs}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
               machines={machine.machines} // Assuming you want to display the first image

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo} from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 
@@ -103,24 +103,45 @@ function UserLocation({ mapRef }) {
 }
 
 // Export the marker component for use in Map
-export function UserLocationMarker({ userLocation, machines }) {
+export function UserLocationMarker({ userLocation, machines, mapRef, markerRefs }) {
   const nearest = useMemo(
     () => getNearestOpenMachines(userLocation, machines, 3),
     [userLocation, machines]
   );
+  const handleSelect = (m) => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    map.once('moveend', () => {
+      markerRefs.current[m.id]?.openPopup();
+    });
+    map.flyTo(m.position, 18);
+  };
+
   if (!userLocation) return null;
 
   return (
     <Marker position={userLocation} icon={blueDotIcon}>
       <Popup>
         <div>
-          <p><strong>Nearest Vending Machines</strong></p>
+          <style>{`
+            .machine-item {
+              cursor: pointer;
+              padding: 0.1em 0.4em;
+              border-radius: 4px;
+              transition: background-color 0.15s ease;
+            }
+            .machine-item:hover {
+              color: #4b93ff;
+            }
+          `}</style>
+          <p><strong>Nearest Open Vending Machines</strong></p>
             {nearest.length === 0 ? (
             <p>No open vending machines found nearby.</p>
           ) : (
-            <ol style={{ paddingBottom: "0.5em", paddingLeft: "1.2em", margin: 0 }}>
+            <ol style={{ paddingBottom: "0.5em", paddingLeft: "1.2em", margin: 0, gap: "0.75em" }}>
               {nearest.map((m, i) => (
-                <li key={m.id ?? i}>
+                <li key={m.id ?? i} className="machine-item" onClick={() => handleSelect(m)}>
                   {m.name || "Vending Machine"} ({formatDistance(m.distance)})
                 </li>
               ))}

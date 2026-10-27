@@ -77,11 +77,13 @@ function isBuildingOpen(openingTimes, now = new Date()) {
 }
 
 export function VendingMachineMarker({
+  id, 
   machineTypes,
   position,
   name,
   machines,
   openingTimes,
+  markerRefs
 }) {
   if (!position) return null;
   
@@ -99,6 +101,11 @@ export function VendingMachineMarker({
     <Marker
       position={position}
       icon={icon}
+      ref={(el) => {
+        if (!markerRefs || id == null) return;
+        if (el) markerRefs.current[id] = el;
+        else delete markerRefs.current[id];
+      }}
     >
       <Popup>
         <div>
