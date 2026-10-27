@@ -96,6 +96,8 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
               <ul>
                 <li><strong>Search:</strong> Click the search button to search for vending machines</li>
                 <li><strong>Recenter:</strong> Click the crosshair button to center the map on your location</li>
+                <li><strong>Nearby:</strong> Click your location marker to see nearby vending machines</li>
+                <li><strong>Markers:</strong> Click on vending machine markers to view details</li> 
               </ul>
               <h3>Navigation (PC)</h3>
               <ul>
