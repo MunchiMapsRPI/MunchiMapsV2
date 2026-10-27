@@ -96,13 +96,9 @@ function UserLocation({ mapRef }) {
 
   useEffect(() => {
     watchUserLocation((location) => {
-      // This will update the component with new location data
-      // The location state will be managed by the parent Map component
     });
   }, []);
 
-  // This component doesn't render anything directly
-  // It provides helper functions for location tracking
   return null;
 }
 
@@ -118,11 +114,11 @@ export function UserLocationMarker({ userLocation, machines }) {
     <Marker position={userLocation} icon={blueDotIcon}>
       <Popup>
         <div>
-          <p><strong>Closest Vending Machines To Your Location</strong></p>
+          <p><strong>Nearest Vending Machines</strong></p>
             {nearest.length === 0 ? (
             <p>No open vending machines found nearby.</p>
           ) : (
-            <ol style={{ paddingLeft: "1.2em", margin: 0 }}>
+            <ol style={{ paddingBottom: "0.5em", paddingLeft: "1.2em", margin: 0 }}>
               {nearest.map((m, i) => (
                 <li key={m.id ?? i}>
                   {m.name || "Vending Machine"} ({formatDistance(m.distance)})
