@@ -9,18 +9,15 @@ import { UserLocationMarker } from './components/UserLocation'
 import VendingMachineMarker from './components/Marker';
 
 function Map() {
-  const [apiStatus, setApiStatus] = useState('Connecting...');
   const [vendingMachines, setVendingMachines] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
-  const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
-
-  useEffect(() => {
-    fetch('http://localhost:5000/') // This is your backend server address
-      .then(res => res.text())
-      .then(data => setApiStatus(data))
-      .catch(err => setApiStatus('Connection failed: ' + err.message));
-  }, []);
+  const markerRefs = useRef(new globalThis.Map());
+  const buildings = [...new Set(
+    vendingMachines
+      .map((machine) => machine.location?.building)
+      .filter(Boolean),
+  )];
 
   useEffect(() => {
     fetch('http://localhost:5000/getInfo') // This is your backend server address
@@ -36,8 +33,6 @@ function Map() {
         (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation([latitude, longitude]);
-          // Optionally center map on user location
-          // setMapCenter([latitude, longitude]);
         },
         (error) => {
           console.error('Error getting location:', error);
@@ -59,20 +54,25 @@ function Map() {
     }
   }, []);
 
-  const handleSearch = (query) => {
-    console.log('Searching for:', query);
-    // TODO: Integrate with backend to search vending machines
-  };
+  const handleBuildingSelect = (building) => {
+    const machine = vendingMachines.find(
+      (item) => item.location?.building === building,
+    );
+    const coordinates = machine?.location?.geolocation?.coordinates;
 
-  const handleReport = () => {
-    console.log('Opening report dialog');
-    // TODO: Integrate with backend to report vending machines
+    if (!machine || !mapRef.current || !Array.isArray(coordinates) || coordinates.length < 2) {
+      console.error(`Unable to navigate to building "${building}": coordinates are unavailable.`);
+      return;
+    }
+
+    const position = [coordinates[0], coordinates[1]];
+    mapRef.current.flyTo(position, 18);
+    markerRefs.current.get(building)?.openPopup();
   };
 
   const handleRecenter = () => {
     if (userLocation && mapRef.current) {
       mapRef.current.flyTo(userLocation, 18);
-      setMapCenter(userLocation);
       console.log('Recentering to:', userLocation);
     } else {
       console.log('User location not available');
@@ -93,7 +93,7 @@ function Map() {
         <img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/MunchiMaps%20Logos/MunchiMapsCroppedLogo.png?raw=true" alt="MunchiMaps" />
       </div>
       <div id="map-container">
-        <MapContainer ref={mapRef} center={mapCenter} zoom={15} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
+        <MapContainer ref={mapRef} center={[42.729014, -73.676728]} zoom={15} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -105,16 +105,22 @@ function Map() {
               machineTypes={machine.contents}
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
-              machines={machine.machines} // Assuming you want to display the first image
               openingTimes={machine.location.opening_times}
+              markerRef={(marker) => {
+                if (marker) {
+                  markerRefs.current.set(machine.location.building, marker);
+                } else {
+                  markerRefs.current.delete(machine.location.building);
+                }
+              }}
             />
           ))}
         </MapContainer>
       </div>
       <BottomBar 
-        onSearch={handleSearch}
-        onReport={handleReport}
         onRecenter={handleRecenter}
+        onBuildingSelect={handleBuildingSelect}
+        buildings={buildings}
       />
       <MapControls 
         onMapKeyClick={handleMapKeyClick}

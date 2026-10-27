@@ -1,30 +1,33 @@
 import { useState } from 'react';
+import Fuse from 'fuse.js';
 import '../styles/BottomBar.css';
 
-function BottomBar({ onSearch, onReport, onRecenter }) {
+function getBuildingMatches(buildings, query) {
+  if (!query.trim()) return [];
+
+  const fuse = new Fuse(buildings, {
+    threshold: 0.4,
+    ignoreLocation: true,
+  });
+
+  return fuse.search(query).map((result) => result.item);
+}
+
+function BottomBar({
+  onRecenter,
+  onBuildingSelect,
+  buildings = [],
+}) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = () => {
-    if (onSearch) {
-      onSearch(searchQuery);
-    }
-    setSearchQuery('');
-    setIsSearchOpen(false);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
-  };
+  const buildingMatches = getBuildingMatches(buildings, searchQuery);
 
   return (
     <div className="bottom-bar">
       <button 
         className="bar-button search-button"
         onClick={() => setIsSearchOpen(!isSearchOpen)}
-        title="Search vending machines"
+        title="Search buildings"
       >
         <img src="/icons/MenuIcons/search.svg" alt="Search" className="button-icon" />
       </button>
@@ -33,12 +36,30 @@ function BottomBar({ onSearch, onReport, onRecenter }) {
         <input
           type="text"
           className="search-input"
-          placeholder="Search vending machines..."
+          placeholder="Search buildings..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={handleKeyPress}
           autoFocus
         />
+      )}
+
+      {isSearchOpen && buildingMatches.length > 0 && (
+        <div className="building-results" role="listbox" aria-label="Building search results">
+          {buildingMatches.map((building) => (
+            <button
+              className="building-result"
+              key={building}
+              type="button"
+              role="option"
+              onClick={() => {
+                setSearchQuery(building);
+                onBuildingSelect(building);
+              }}
+            >
+              {building}
+            </button>
+          ))}
+        </div>
       )}
 
       <button 

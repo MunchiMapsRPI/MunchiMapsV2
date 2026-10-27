@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { Marker, Popup } from "react-leaflet";
-import { ErrorBoundary, getErrorMessage } from "react-error-boundary";
 import L from "leaflet";
 
 // Create custom markers
@@ -80,8 +78,8 @@ export function VendingMachineMarker({
   machineTypes,
   position,
   name,
-  machines,
   openingTimes,
+  markerRef,
 }) {
   if (!position) return null;
   
@@ -99,6 +97,7 @@ export function VendingMachineMarker({
     <Marker
       position={position}
       icon={icon}
+      ref={markerRef}
     >
       <Popup>
         <div>
@@ -110,8 +109,6 @@ export function VendingMachineMarker({
                   ? "Food Vending Machine"
                   : "Food & Drink Vending Machine")}
           </h3>
-          <p>
-          </p>
         </div>
       </Popup>
     </Marker>
