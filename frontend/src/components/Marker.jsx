@@ -82,6 +82,7 @@ export function VendingMachineMarker({
   name,
   machines,
   openingTimes,
+  markerRef,
 }) {
   if (!position) return null;
   
@@ -99,6 +100,7 @@ export function VendingMachineMarker({
     <Marker
       position={position}
       icon={icon}
+      ref={markerRef}
     >
       <Popup>
         <div>

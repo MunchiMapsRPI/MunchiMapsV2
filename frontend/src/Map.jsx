@@ -14,6 +14,7 @@ function Map() {
   const [userLocation, setUserLocation] = useState(null);
   const [mapCenter, setMapCenter] = useState([42.729014, -73.676728]);
   const mapRef = useRef(null);
+  const markerRefs = useRef(new globalThis.Map());
   const buildings = [...new Set(
     vendingMachines
       .map((machine) => machine.location?.building)
@@ -64,14 +65,20 @@ function Map() {
     }
   }, []);
 
-  const handleSearch = (query) => {
-    console.log('Searching for:', query);
-    // TODO: Integrate with backend to search vending machines
-  };
+  const handleBuildingSelect = (building) => {
+    const machine = vendingMachines.find(
+      (item) => item.location?.building === building,
+    );
+    const coordinates = machine?.location?.geolocation?.coordinates;
 
-  const handleReport = () => {
-    console.log('Opening report dialog');
-    // TODO: Integrate with backend to report vending machines
+    if (!machine || !mapRef.current || !Array.isArray(coordinates) || coordinates.length < 2) {
+      console.error(`Unable to navigate to building "${building}": coordinates are unavailable.`);
+      return;
+    }
+
+    const position = [coordinates[0], coordinates[1]];
+    mapRef.current.flyTo(position, 18);
+    markerRefs.current.get(building)?.openPopup();
   };
 
   const handleRecenter = () => {
@@ -112,14 +119,20 @@ function Map() {
               name={machine.location.building}
               machines={machine.machines} // Assuming you want to display the first image
               openingTimes={machine.location.opening_times}
+              markerRef={(marker) => {
+                if (marker) {
+                  markerRefs.current.set(machine.location.building, marker);
+                } else {
+                  markerRefs.current.delete(machine.location.building);
+                }
+              }}
             />
           ))}
         </MapContainer>
       </div>
       <BottomBar 
-        onSearch={handleSearch}
-        onReport={handleReport}
         onRecenter={handleRecenter}
+        onBuildingSelect={handleBuildingSelect}
         buildings={buildings}
       />
       <MapControls 

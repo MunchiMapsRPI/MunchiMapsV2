@@ -13,7 +13,11 @@ function getBuildingMatches(buildings, query) {
   return fuse.search(query).map((result) => result.item);
 }
 
-function BottomBar({ onSearch, onReport, onRecenter, buildings = [] }) {
+function BottomBar({
+  onRecenter,
+  onBuildingSelect,
+  buildings = [],
+}) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const buildingMatches = getBuildingMatches(buildings, searchQuery);
@@ -47,7 +51,10 @@ function BottomBar({ onSearch, onReport, onRecenter, buildings = [] }) {
               key={building}
               type="button"
               role="option"
-              onClick={() => setSearchQuery(building)}
+              onClick={() => {
+                setSearchQuery(building);
+                onBuildingSelect(building);
+              }}
             >
               {building}
             </button>
