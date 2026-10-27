@@ -74,7 +74,7 @@ function Map() {
 
     const position = [coordinates[0], coordinates[1]];
     mapRef.current.flyTo(position, 18);
-    markerRefs.current.get(building)?.openPopup();
+    markerRefs.current[machine._id]?.openPopup();
   };
 
   const handleRecenter = () => {
@@ -131,13 +131,6 @@ function Map() {
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
               openingTimes={machine.location.opening_times}
-              markerRef={(marker) => {
-                if (marker) {
-                  markerRefs.current.set(machine.location.building, marker);
-                } else {
-                  markerRefs.current.delete(machine.location.building);
-                }
-              }}
             />
           ))}
         </MapContainer>
