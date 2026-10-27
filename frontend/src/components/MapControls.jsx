@@ -43,19 +43,19 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
             <div className="legend-items">
               <div className="legend-item">
                 <img src="/icons/Map Icons/Drink.png" alt="Drink Vending Machines" className="legend-marker marker-vending" />
-                <span>Drink Vending Machines</span>
+                <span>Drink Vending Machine(s)</span>
               </div>
               <div className="legend-item">
                 <img src="/icons/Map Icons/Food.png" alt="Food Vending Machines" className="legend-marker marker-vending" />
-                <span>Food Vending Machines</span>
+                <span>Food Vending Machine(s)</span>
               </div>
               <div className="legend-item">
                 <img src="/icons/Map Icons/Food&Drink.png" alt="Food and Drink Vending Machines" className="legend-marker marker-vending" />
-                <span>Food and Drink Vending Machines</span>
+                <span>Food and Drink Vending Machine(s)</span>
               </div>
               <div className="legend-item">
                 <img src="/icons/Map Icons/Food&DrinkWarning.png" alt="Problem with vending machine" className="legend-marker marker-warning" />
-                <span>Problem with vending machine</span>
+                <span>Problem with Vending Machine(s)</span>
               </div>
               <div className="legend-item">
                 <img src="/icons/Map Icons/Food&DrinkClosed.png" alt="Building Closed" className="legend-marker marker-warning" />
