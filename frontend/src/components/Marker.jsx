@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
@@ -23,6 +24,63 @@ const foodAndDrinkIcon = L.icon({
   popupAnchor: [0, -40],
 });
 
+
+// Function for populating with images and the slider
+function VendingMachineSlider({ machines }) {
+  const [index, setIndex] = useState(0);
+  const [imageFailed, setImageFailed] = useState(false); // Shows if the image is broken (set to false automatically)
+
+  // Runs everytime index changes
+  useEffect(() => {
+    setImageFailed(false);
+  }, [index]);
+
+  // If there is no array, empty, or doesnt exist
+  if (!Array.isArray(machines) || machines.length === 0) {
+    return <p>Vending machine info not available</p>;
+  }
+
+  const machine = machines[index]; // Machine that is selected
+  const count = machines.length; // Total number of machines
+
+  const IMAGE_WIDTH = 200;               // image size
+  const arrowSize = IMAGE_WIDTH * 0.40;  // scalable arrow size
+
+  const arrowStyle = { // styles the arrow
+    flexShrink: 0,
+    width: arrowSize,
+    height: arrowSize,
+    fontSize: arrowSize * 0.5,
+    lineHeight: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    outline: "none"
+  };
+
+  
+
+  return (
+    <div>
+      {machine.image && !imageFailed ? ( // Shows the image
+        <img
+          src={machine.image}
+          alt={machine.category}
+          onError={() => setImageFailed(true)}
+          style={{ width : IMAGE_WIDTH,  margin: "30px 0"}}
+        />  
+      ) : (
+        <p>Image not available</p> // If image failed
+      )}
+      {count > 1 && ( // For more than one image
+        <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+          <button style={arrowStyle} onClick={() => setIndex((index - 1 + count) % count)}>◀</button> 
+          <button style={arrowStyle} onClick={() => setIndex((index + 1) % count)}>▶</button>
+        </div>
+      )}
+    </div>
+  );
+}
 const drinkClosedIcon = L.icon({
   iconUrl: "/icons/Map Icons/DrinkClosed.png",
   iconSize: [50, 50],
@@ -79,6 +137,7 @@ export function VendingMachineMarker({
   machineTypes,
   position,
   name,
+  machines,
   openingTimes,
   markerRefs
 }) {
@@ -105,7 +164,7 @@ export function VendingMachineMarker({
       }}
     >
       <Popup>
-        <div>
+        <div style={{ caretColor: "transparent" }}>
           <h3>
             {name ||
               (machineTypes === "drink"
@@ -114,6 +173,7 @@ export function VendingMachineMarker({
                   ? "Food Vending Machine"
                   : "Food & Drink Vending Machine")}
           </h3>
+          <VendingMachineSlider machines ={machines} />
         </div>
       </Popup>
     </Marker>

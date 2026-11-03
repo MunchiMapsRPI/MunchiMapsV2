@@ -131,6 +131,7 @@ function Map() {
               position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
               name={machine.location.building}
               openingTimes={machine.location.opening_times}
+              machines={machine.machines}
             />
           ))}
         </MapContainer>
