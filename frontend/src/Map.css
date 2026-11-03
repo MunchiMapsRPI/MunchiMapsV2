@@ -916,3 +916,12 @@ html, body {
   color: #c9302c;
   transform: scale(1.2);
 }
+
+#map-container.rainbow {
+  animation: rainbow-hue 6s linear infinite;
+}
+
+@keyframes rainbow-hue {
+  from { filter: hue-rotate(0deg) saturate(2.5); }
+  to   { filter: hue-rotate(360deg) saturate(2.5); }
+}
