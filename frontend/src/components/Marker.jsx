@@ -80,6 +80,7 @@ function VendingMachineSlider({ machines }) {
       )}
     </div>
   );
+}
 const drinkClosedIcon = L.icon({
   iconUrl: "/icons/Map Icons/DrinkClosed.png",
   iconSize: [50, 50],
@@ -136,6 +137,7 @@ export function VendingMachineMarker({
   machineTypes,
   position,
   name,
+  machines,
   openingTimes,
   markerRefs
 }) {
