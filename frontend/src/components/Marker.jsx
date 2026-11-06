@@ -44,43 +44,75 @@ function VendingMachineSlider({ machines }) {
   const count = machines.length; // Total number of machines
 
   const IMAGE_WIDTH = 200;               // image size
-  const arrowSize = IMAGE_WIDTH * 0.40;  // scalable arrow size
+  const buttonWidth = IMAGE_WIDTH / 2;   // each button takes half the image width
+  const buttonHeight = buttonWidth / 2;  // rectangle height is half the width
 
-  const arrowStyle = { // styles the arrow
-    flexShrink: 0,
-    width: arrowSize,
-    height: arrowSize,
-    fontSize: arrowSize * 0.5,
-    lineHeight: 1,
+  const buttonStyle = {
+    width: buttonWidth,
+    height: buttonHeight,
+    minWidth: 0,
+    minHeight: 0,
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    padding: 0,
+    margin: 0,
+    boxSizing: "border-box",
     cursor: "pointer",
-    outline: "none"
+    outline: "none",
   };
 
-  
+  const arrowSize = buttonHeight * 0.45
+
+  const Arrow = ({ direction }) => (
+    <svg
+      width={arrowSize}
+      height={arrowSize}
+      viewBox="0 0 10 10"
+      aria-hidden="true"
+      style={{ display: "block" }}
+    >
+      <polygon
+        points={direction === "left" ? "8,0 8,10 1,5" : "2,0 2,10 9,5"}
+        fill="currentColor"
+      />
+  </svg>
+  );
 
   return (
-    <div>
+    <div style={{ width: IMAGE_WIDTH, margin: "0 auto" }}>
       {machine.image && !imageFailed ? ( // Shows the image
         <img
           src={machine.image}
           alt={machine.category}
           onError={() => setImageFailed(true)}
-          style={{ width : IMAGE_WIDTH,  margin: "30px 0"}}
+          style={{ display: "block", width: IMAGE_WIDTH, margin: "30px 0" }}
         />  
       ) : (
         <p>Image not available</p> // If image failed
       )}
       {count > 1 && ( // For more than one image
-        <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
-          <button style={arrowStyle} onClick={() => setIndex((index - 1 + count) % count)}>◀</button> 
-          <button style={arrowStyle} onClick={() => setIndex((index + 1) % count)}>▶</button>
+        <div style={{ display: "flex", width: IMAGE_WIDTH }}>
+          <button
+            style={buttonStyle}
+            onClick={() => setIndex((index - 1 + count) % count)}
+            aria-label="Previous image"
+          >
+            <Arrow direction = "left" />
+          </button>
+          <button
+            style={buttonStyle}
+            onClick={() => setIndex((index + 1) % count)}
+            aria-label="Next image"
+          >
+            <Arrow direction = "right" />
+          </button>
         </div>
       )}
     </div>
   );
 }
+
 const drinkClosedIcon = L.icon({
   iconUrl: "/icons/Map Icons/DrinkClosed.png",
   iconSize: [50, 50],
