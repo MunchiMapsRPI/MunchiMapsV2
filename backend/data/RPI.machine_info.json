@@ -69,7 +69,7 @@
     "$oid": "69e7e5b7a4b8a94a89628527"
   },
   "location": {
-    "building": "Amos Eaton",
+    "building": "Amos Eaton Hall",
     "directions": "1st floor directly in front of east door",
     "geolocation": {
       "type": "Point",
@@ -364,8 +364,261 @@
           }
         ]
       ]
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/main/backend/data/images/Amos%20Eaton/AmosEatonDrink1.png",
+      "category": "drink",
+      "contents": [
+        [
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks Vanilla Frapuccino",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks DoubleShot Mocha",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Starbucks DoubleShot Mocha",
+            "stocked": true,
+            "price": 4.5
+          },
+          {
+            "name": "Rockstar Punched Fruit Puncher",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Rockstar Punched Fruit Puncher",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "",
+            "stocked": false,
+            "price": null
+          },
+          {
+            "name": "Celsius Live Fit Sparking Orange",
+            "stocked": true,
+            "price": 3.5
+          }
+        ],
+        [
+          {
+            "name": "Pure Leaf Real Brewed Tea Lemon",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Lemon",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Raspberry",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Pure Leaf Real Brewed Tea Raspberry",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Dole Apple Juice",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Dole Apple Juice",
+            "stocked": true,
+            "price": 2.75
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          },
+          {
+            "name": "Gatorade Gatorlyte Zero Lemon Lime",
+            "stocked": true,
+            "price": 3.5
+          }
+        ],
+        [
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Zero Sugar",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Zero Sugar",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Diet",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Pepsi Diet",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Starry",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Starry",
+            "stocked": true,
+            "price": 2.5
+          }
+        ],
+        [
+          {
+            "name": "Mountain Dew",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Mountain Dew",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Schweppes Ginger Ale",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Schweppes Ginger Ale",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Dole Strawberry Lemonade",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Dole Strawberry Lemonade",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Gatorade Zero Cool Blue",
+            "stocked": true,
+            "price": 2.5
+          }
+        ],
+        [
+          {
+            "name": "LIFEWTR",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "LIFEWTR",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Still Water",
+            "stocked": true,
+            "price": 3
+          },
+          {
+            "name": "Aquafina Purified Still Water",
+            "stocked": true,
+            "price": 3
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          },
+          {
+            "name": "Aquafina Purified Drinking Water",
+            "stocked": true,
+            "price": 2.5
+          }
+        ]
+      ]
     }
-  ]
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/backend/data/images/Amos%20Eaton/AmosEatonMap.svg"
 },
 {
   "_id": {
@@ -403,7 +656,7 @@
     "$oid": "69ebbba61206f9199731b249"
   },
   "location": {
-    "building": "DCC",
+    "building": "Darrin Communications Center (DCC)",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
@@ -439,8 +692,8 @@
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.73022009495838,
-        -73.68115317445492
+        42.73006,
+        -73.68113
       ]
     }
   },
@@ -465,7 +718,7 @@
     "$oid": "69ebbc091206f9199731b24b"
   },
   "location": {
-    "building": "JEC",
+    "building": "J Erik Jonsson Engineering Center (JEC)",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
@@ -496,13 +749,13 @@
     "$oid": "69ebbc4c1206f9199731b24c"
   },
   "location": {
-    "building": "JROWL",
+    "building": "Jonsson-Rowland Science Center (JROWL)",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.72900301770575,
-        -73.68045377630875
+        42.72899,
+        -73.67972
       ]
     }
   },
@@ -651,13 +904,13 @@
     "$oid": "69ebbfcd1206f9199731b252"
   },
   "location": {
-    "building": "Sage Labs",
+    "building": "Russell Sage Laboratory",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.73097906477598,
-        -73.68164141863616
+        42.730755,
+        -73.68161
       ]
     }
   },
@@ -713,7 +966,7 @@
     "$oid": "69ebc1341206f9199731b254"
   },
   "location": {
-    "building": "Union",
+    "building": "Rensselaer Student Union",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
@@ -744,7 +997,7 @@
     "$oid": "69ebc1a11206f9199731b255"
   },
   "location": {
-    "building": "VCC",
+    "building": "Voorhees Computing Center (VCC)",
     "directions": "1st floor",
     "geolocation": {
       "type": "Point",
@@ -811,8 +1064,8 @@
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.73180780158587,
-        -73.68320404747236
+        42.73177,
+        -73.68339
       ]
     }
   },
