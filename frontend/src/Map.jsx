@@ -113,8 +113,16 @@ function Map() {
     }
 
     const position = [coordinates[0], coordinates[1]];
-    mapRef.current.flyTo(position, 18);
-    markerRefs.current[machine._id]?.openPopup();
+    const map = mapRef.current;
+    const openPopup = () => markerRefs.current[machine._id]?.openPopup();
+
+    map.once('moveend', openPopup);
+    map.flyTo(position, 18);
+
+    if (map.getZoom() === 18 && map.getCenter().equals(position)) {
+      map.off('moveend', openPopup);
+      openPopup();
+    }
   };
 
   const handleRecenter = () => {

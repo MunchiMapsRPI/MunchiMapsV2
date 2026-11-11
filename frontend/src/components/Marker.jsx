@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
@@ -26,7 +26,7 @@ const foodAndDrinkIcon = L.icon({
 
 
 // Function for populating with images and the slider
-function VendingMachineSlider({ machines }) {
+function VendingMachineSlider({ machines, onImageLoad }) {
   const [index, setIndex] = useState(0);
   const [imageFailed, setImageFailed] = useState(false); // Shows if the image is broken (set to false automatically)
 
@@ -43,7 +43,7 @@ function VendingMachineSlider({ machines }) {
   const machine = machines[index]; // Machine that is selected
   const count = machines.length; // Total number of machines
 
-  const IMAGE_WIDTH = 200;               // image size
+  const IMAGE_WIDTH = 280;               // image size
   const buttonWidth = IMAGE_WIDTH / 2;   // each button takes half the image width
   const buttonHeight = buttonWidth / 2;  // rectangle height is half the width
 
@@ -76,7 +76,7 @@ function VendingMachineSlider({ machines }) {
         points={direction === "left" ? "8,0 8,10 1,5" : "2,0 2,10 9,5"}
         fill="currentColor"
       />
-  </svg>
+    </svg>
   );
 
   return (
@@ -85,9 +85,10 @@ function VendingMachineSlider({ machines }) {
         <img
           src={machine.image}
           alt={machine.category}
+          onLoad={onImageLoad}
           onError={() => setImageFailed(true)}
-          style={{ display: "block", width: IMAGE_WIDTH, margin: "30px 0" }}
-        />  
+          style={{ display: "block", width: IMAGE_WIDTH, maxWidth: "100%", margin: "20px 0" }}
+        />
       ) : (
         <p>Image not available</p> // If image failed
       )}
@@ -98,14 +99,14 @@ function VendingMachineSlider({ machines }) {
             onClick={() => setIndex((index - 1 + count) % count)}
             aria-label="Previous image"
           >
-            <Arrow direction = "left" />
+            <Arrow direction="left" />
           </button>
           <button
             style={buttonStyle}
             onClick={() => setIndex((index + 1) % count)}
             aria-label="Next image"
           >
-            <Arrow direction = "right" />
+            <Arrow direction="right" />
           </button>
         </div>
       )}
@@ -165,7 +166,7 @@ function isBuildingOpen(openingTimes, now = new Date()) {
 }
 
 export function VendingMachineMarker({
-  id, 
+  id,
   machineTypes,
   position,
   name,
@@ -173,8 +174,10 @@ export function VendingMachineMarker({
   openingTimes,
   markerRefs
 }) {
+  const popupRef = useRef(null);
+
   if (!position) return null;
-  
+
   const open = isBuildingOpen(openingTimes)
   const icon =
     machineTypes === "drink"
@@ -195,7 +198,7 @@ export function VendingMachineMarker({
         else delete markerRefs.current[id];
       }}
     >
-      <Popup>
+      <Popup ref={popupRef} autoPan={true} autoPanPadding={[0, 100]}>
         <div style={{ caretColor: "transparent" }}>
           <h3>
             {name ||
@@ -205,7 +208,10 @@ export function VendingMachineMarker({
                   ? "Food Vending Machine"
                   : "Food & Drink Vending Machine")}
           </h3>
-          <VendingMachineSlider machines ={machines} />
+          <VendingMachineSlider
+            machines={machines}
+            onImageLoad={() => popupRef.current?.update()}
+          />
         </div>
       </Popup>
     </Marker>
