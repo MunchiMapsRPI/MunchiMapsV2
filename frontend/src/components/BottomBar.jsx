@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import Fuse from 'fuse.js';
+import { useState } from 'react';
+//import Fuse from 'fuse.js';
 import '../styles/BottomBar.css';
 
 function getBuildingMatches(buildings, query) {

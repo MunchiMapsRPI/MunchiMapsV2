@@ -1,11 +1,23 @@
 .map-controls {
-  position: absolute;
+  position: fixed;
   top: 20px;
-  right: 20px;
-  z-index: 1000;
+  right: 16px;
+
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  z-index: 99999;
+}
+
+.map-key-button,
+.help-button,
+.github-button {
+  position: static;
+  top: auto;
+  right: auto;
+  left: auto;
 }
 
 .control-button {

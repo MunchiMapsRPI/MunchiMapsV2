@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/MapControls.css';
 
-function MapControls({ onMapKeyClick, onHelpClick }) {
+function MapControls({ onMapKeyClick, onHelpClick, onShowGit }) {
   const [showMapKey, setShowMapKey] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
 
@@ -15,6 +15,14 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
     setShowHelp(!showHelp);
     setShowMapKey(false);
     if (onHelpClick) onHelpClick();
+  };
+
+  const handleGitClick = () => {
+    window.open(
+      "https://github.com/MunchiMapsRPI/MunchiMapsV2.git",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -33,6 +41,14 @@ function MapControls({ onMapKeyClick, onHelpClick }) {
         title="How to use"
       >
         <img src="/icons/MenuIcons/help-circle.svg" alt="Help" className="control-icon" />
+      </button>
+
+      <button
+        className="control-button github-button"
+        onClick={handleGitClick}
+        title="View GitHub Repository"
+      >
+        <img src="/icons/Map Icons/Github.png" alt="GitHub" className="control-icon" />
       </button>
 
       {showMapKey && (
