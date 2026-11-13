@@ -182,6 +182,9 @@ function Map() {
               name={machine.location.building}
               openingTimes={machine.location.opening_times}
               machines={machine.machines}
+              mapUrl={machine.map}
+              directions={machine.location?.directions}
+              disabledDirections={machine.location?.disabled_directions}
             />
           ))}
         </MapContainer>

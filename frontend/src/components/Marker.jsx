@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
@@ -26,9 +27,10 @@ const foodAndDrinkIcon = L.icon({
 
 
 // Function for populating with images and the slider
-function VendingMachineSlider({ machines, onImageLoad }) {
+function VendingMachineSlider({ machines, onImageLoad, mapUrl, directions, disabledDirections, name }) {
   const [index, setIndex] = useState(0);
   const [imageFailed, setImageFailed] = useState(false); // Shows if the image is broken (set to false automatically)
+  const [showDirectionsModal, setShowDirectionsModal] = useState(false); // Popup to display more directions
 
   // Runs everytime index changes
   useEffect(() => {
@@ -62,7 +64,7 @@ function VendingMachineSlider({ machines, onImageLoad }) {
     outline: "none",
   };
 
-  const arrowSize = buttonHeight * 0.45
+  const arrowSize = buttonHeight * 0.45;
 
   const Arrow = ({ direction }) => (
     <svg
@@ -87,18 +89,18 @@ function VendingMachineSlider({ machines, onImageLoad }) {
           alt={machine.category}
           onLoad={onImageLoad}
           onError={() => setImageFailed(true)}
-          style={{ display: "block", width: IMAGE_WIDTH, maxWidth: "100%", margin: "20px 0" }}
+          style={{ display: "block", width: IMAGE_WIDTH, maxWidth: "100%"}}
         />
       ) : (
         <p>Image not available</p> // If image failed
       )}
-      <div style={{ display: "flex", width: IMAGE_WIDTH, marginBottom: "10px" }}>
+      <div style={{ display: "flex", width: IMAGE_WIDTH, marginBottom: "30px" }}>
         <button
           style={buttonStyle}
-          onClick={() => {}}
+          onClick={() => setShowDirectionsModal(true)}
           aria-label="Get directions"
         >
-          Internal Directions
+          <strong>Internal Directions</strong>
         </button>
         <button
           style={buttonStyle}
@@ -130,6 +132,91 @@ function VendingMachineSlider({ machines, onImageLoad }) {
           </button>
         </div>
       )}
+
+      {showDirectionsModal &&
+        createPortal(
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.75)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 9999,
+              padding: "20px",
+              pointerEvents: "auto",
+            }}
+            onClick={(event) => {
+              event.stopPropagation();
+              setShowDirectionsModal(false);
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "white",
+                borderRadius: "12px",
+                width: "min(92vw, 720px)",
+                maxHeight: "90vh",
+                overflow: "auto",
+                padding: "20px",
+                boxSizing: "border-box",
+                position: "relative",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
+              }}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setShowDirectionsModal(false);
+                }}
+                aria-label="Close directions"
+                style={{
+                  position: "absolute",
+                  top: "12px",
+                  right: "12px",
+                  border: "none",
+                  background: "transparent",
+                  fontSize: "24px",
+                  cursor: "pointer",
+                }}
+              >
+                ×
+              </button>
+
+              <h2 style={{ marginTop: 0, marginBottom: "16px" }}>{name || "Directions"}</h2>
+
+              {mapUrl ? (
+                <img
+                  src={mapUrl}
+                  alt={`${name || "Building"} map`}
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    maxHeight: "400px",
+                    objectFit: "contain",
+                    marginBottom: "16px",
+                  }}
+                />
+              ) : (
+                <p>No map image available for this location.</p>
+              )}
+
+              <div style={{ marginBottom: "20px" }}>
+                <strong>Directions:</strong>
+                <p style={{ margin: "8px 0 0" }}>{directions || "No directions available."}</p>
+              </div>
+
+              <div>
+                <strong>Disabled directions:</strong>
+                <p style={{ margin: "8px 0 0" }}>{disabledDirections || "No disabled-access directions available."}</p>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )
+      }
     </div>
   );
 }
@@ -192,7 +279,10 @@ export function VendingMachineMarker({
   name,
   machines,
   openingTimes,
-  markerRefs
+  markerRefs,
+  mapUrl,
+  directions,
+  disabledDirections,
 }) {
   const popupRef = useRef(null);
 
@@ -231,6 +321,10 @@ export function VendingMachineMarker({
           <VendingMachineSlider
             machines={machines}
             onImageLoad={() => popupRef.current?.update()}
+            mapUrl={mapUrl}
+            directions={directions}
+            disabledDirections={disabledDirections}
+            name={name}
           />
         </div>
       </Popup>
