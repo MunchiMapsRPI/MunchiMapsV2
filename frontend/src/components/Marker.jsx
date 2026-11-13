@@ -104,7 +104,9 @@ function VendingMachineSlider({ machines, onImageLoad, mapUrl, directions, disab
         </button>
         <button
           style={buttonStyle}
-          onClick={() => {}}
+          onClick={() => {
+            window.open("https://forms.gle/zfTDXKoTV737R7KR7", "_blank", "noopener,noreferrer");
+          }}
           aria-label="Report an issue"
         >
           <img
