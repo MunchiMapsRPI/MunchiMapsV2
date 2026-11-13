@@ -34,38 +34,6 @@
 },
 {
   "_id": {
-    "$oid": "69e7e2a5a4b8a94a89628526"
-  },
-  "location": {
-    "building": "Academy Hall",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72749913373329,
-        -73.67858048827672
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": "Pays back in $5 bills"
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Academy%20Hall/AcademyHallDrink1.jpg",
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Academy%20Hall/AcademyHallSnack1.jpg"
-  ]
-},
-{
-  "_id": {
     "$oid": "69e7e5b7a4b8a94a89628527"
   },
   "location": {
@@ -125,259 +93,7 @@
         "info": ""
       },
       "working": true,
-      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/main/backend/data/images/Amos%20Eaton/AmosEatonDrink1.png",
-      "category": "drink",
-      "contents": [
-        [
-          {
-            "name": "Starbucks Vanilla Frapuccino",
-            "stocked": true,
-            "price": 4.5
-          },
-          {
-            "name": "Starbucks Vanilla Frapuccino",
-            "stocked": true,
-            "price": 4.5
-          },
-          {
-            "name": "Starbucks Vanilla Frapuccino",
-            "stocked": true,
-            "price": 4.5
-          },
-          {
-            "name": "Starbucks DoubleShot Mocha",
-            "stocked": true,
-            "price": 4.5
-          },
-          {
-            "name": "Starbucks DoubleShot Mocha",
-            "stocked": true,
-            "price": 4.5
-          },
-          {
-            "name": "Rockstar Punched Fruit Puncher",
-            "stocked": true,
-            "price": 3.5
-          },
-          {
-            "name": "Rockstar Punched Fruit Puncher",
-            "stocked": true,
-            "price": 3.5
-          },
-          {
-            "name": "",
-            "stocked": false,
-            "price": null
-          },
-          {
-            "name": "Celsius Live Fit Sparking Orange",
-            "stocked": true,
-            "price": 3.5
-          }
-        ],
-        [
-          {
-            "name": "Pure Leaf Real Brewed Tea Lemon",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Pure Leaf Real Brewed Tea Lemon",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Pure Leaf Real Brewed Tea Raspberry",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Pure Leaf Real Brewed Tea Raspberry",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Dole Apple Juice",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Dole Apple Juice",
-            "stocked": true,
-            "price": 2.75
-          },
-          {
-            "name": "Gatorade Gatorlyte Zero Lemon Lime",
-            "stocked": true,
-            "price": 3.5
-          },
-          {
-            "name": "Gatorade Gatorlyte Zero Lemon Lime",
-            "stocked": true,
-            "price": 3.5
-          },
-          {
-            "name": "Gatorade Gatorlyte Zero Lemon Lime",
-            "stocked": true,
-            "price": 3.5
-          }
-        ],
-        [
-          {
-            "name": "Pepsi",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi Zero Sugar",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi Zero Sugar",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi Diet",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Pepsi Diet",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Starry",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Starry",
-            "stocked": true,
-            "price": 2.5
-          }
-        ],
-        [
-          {
-            "name": "Mountain Dew",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Mountain Dew",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Schweppes Ginger Ale",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Schweppes Ginger Ale",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Dole Strawberry Lemonade",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Dole Strawberry Lemonade",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Gatorade Zero Cool Blue",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Gatorade Zero Cool Blue",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Gatorade Zero Cool Blue",
-            "stocked": true,
-            "price": 2.5
-          }
-        ],
-        [
-          {
-            "name": "LIFEWTR",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "LIFEWTR",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Aquafina Purified Still Water",
-            "stocked": true,
-            "price": 3
-          },
-          {
-            "name": "Aquafina Purified Still Water",
-            "stocked": true,
-            "price": 3
-          },
-          {
-            "name": "Aquafina Purified Drinking Water",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Aquafina Purified Drinking Water",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Aquafina Purified Drinking Water",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Aquafina Purified Drinking Water",
-            "stocked": true,
-            "price": 2.5
-          },
-          {
-            "name": "Aquafina Purified Drinking Water",
-            "stocked": true,
-            "price": 2.5
-          }
-        ]
-      ]
-    },
-    {
-      "payment": {
-        "accepts": [
-          "Cash",
-          "Card",
-          "Flex",
-          "RAD",
-          "Coins"
-        ],
-        "info": ""
-      },
-      "working": true,
-      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/main/backend/data/images/Amos%20Eaton/AmosEatonDrink1.png",
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/main/data/images/Amos%20Eaton/AmosEatonDrink1.png",
       "category": "drink",
       "contents": [
         [
@@ -618,7 +334,7 @@
       ]
     }
   ],
-  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/backend/data/images/Amos%20Eaton/AmosEatonMap.svg"
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Amos%20Eaton/AmosEatonMap.png"
 },
 {
   "_id": {
@@ -653,130 +369,6 @@
 },
 {
   "_id": {
-    "$oid": "69ebbba61206f9199731b249"
-  },
-  "location": {
-    "building": "Darrin Communications Center (DCC)",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72934781129576,
-        -73.67895862471251
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbbe21206f9199731b24a"
-  },
-  "location": {
-    "building": "Greene Building",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.73006,
-        -73.68113
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbc091206f9199731b24b"
-  },
-  "location": {
-    "building": "J Erik Jonsson Engineering Center (JEC)",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72984767715344,
-        -73.68020218979997
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbc4c1206f9199731b24c"
-  },
-  "location": {
-    "building": "Jonsson-Rowland Science Center (JROWL)",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72899,
-        -73.67972
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
     "$oid": "69ebbd6e1206f9199731b24d"
   },
   "location": {
@@ -787,68 +379,6 @@
       "coordinates": [
         42.72891902003062,
         -73.67684441122128
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbdad1206f9199731b24e"
-  },
-  "location": {
-    "building": "North Hall",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.73142413669011,
-        -73.67987080514486
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbe3c1206f9199731b24f"
-  },
-  "location": {
-    "building": "Pittsburgh Building",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.73125174093247,
-        -73.68330210329108
       ]
     }
   },
@@ -901,68 +431,6 @@
 },
 {
   "_id": {
-    "$oid": "69ebbfcd1206f9199731b252"
-  },
-  "location": {
-    "building": "Russell Sage Laboratory",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.730755,
-        -73.68161
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebc0041206f9199731b253"
-  },
-  "location": {
-    "building": "Sharp Hall",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72711006590162,
-        -73.67448712656643
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
     "$oid": "69ebc1341206f9199731b254"
   },
   "location": {
@@ -994,94 +462,1277 @@
 },
 {
   "_id": {
-    "$oid": "69ebc1a11206f9199731b255"
+    "$oid": "6af4a325403b3093b4b0818e"
   },
   "location": {
-    "building": "Voorhees Computing Center (VCC)",
-    "directions": "1st floor",
+    "building": "East Campus Athletic Village (ECAV)",
+    "directions": "From the parking lot, walk through the South entrance. Walk down the hallway and make a right where you see a reception desk. The machines are in a room right next to the gymnasium entrance",
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.72931448709032,
-        -73.68164350143745
+        42.73225,
+        -73.6679
       ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebc1db1206f9199731b256"
-  },
-  "location": {
-    "building": "Warren Hall",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72809422047715,
-        -73.67536297260132
+    },
+    "disabled_directions": "Same as above",
+    "opening_times": [
+      [
+        "12:00",
+        "20:00"
+      ],
+      [
+        "9:00",
+        "23:00"
+      ],
+      [
+        "9:00",
+        "23:00"
+      ],
+      [
+        "9:00",
+        "23:00"
+      ],
+      [
+        "9:00",
+        "23:00"
+      ],
+      [
+        "9:00",
+        "21:00"
+      ],
+      [
+        "10:00",
+        "20:00"
       ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
+    ]
   },
   "contents": "drink",
   "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/ECAV/ECAVDrink1.JPG",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/ECAV/ECAVDrink2.JPG",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/ECAV/ECAVMap.png"
 },
 {
   "_id": {
-    "$oid": "69ebc2021206f9199731b257"
+    "$oid": "6af4a59d403b3093b4b0818f"
+  },
+  "location": {
+    "building": "Burdett Avenue Residence Hall (BARH)",
+    "directions": "Go to the northern entrance and turn right into the lobby",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73122,
+        -73.67135
+      ]
+    },
+    "disabled_directions": "Same as above",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/BARH/BARHDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/BARH/BARHDrink2.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/BARH/BARHSnack1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af4ee667270237c5eaecf30"
+  },
+  "location": {
+    "building": "Greene Building",
+    "directions": "From the south entrance, walk up the stairs to the 3rd floor. The machine is to your right down the hall.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73006,
+        -73.68113
+      ]
+    },
+    "disabled_directions": "Take the accessibility ramp from JEC walkway to Greene building on the east side. Leave the stairs to open the door in front of you and enter the elevator to your left. Go to the 3rd floor and the machine is to your left down the hall.",
+    "opening_times": [
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ],
+      [
+        "8:00",
+        "20:00"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Greene/GreeneDrink1.JPG",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Greene/GreeneSnacks1.JPG",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Greene/GreeneBuildingMap.png"
+},
+{
+  "_id": {
+    "$oid": "6af4f2337270237c5eaecf31"
+  },
+  "location": {
+    "building": "Russell Sage Laboratory",
+    "directions": "From the main entrance walk right down the stairs. Once downstairs make a right. You will get to a seperate drink and vending machine. To get to the other machine, walk to the fifth floor through the right staircase. Take a right to the lounge area.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.730755,
+        -73.68161
+      ]
+    },
+    "disabled_directions": "Make a left from the main door to the elevator. From the elevator go down one floor and make a left. You will get to a seperate drink and vending machine. To get to the other machine, turn left and take the elevator to the 5th floor. Turn left to the lounge area.",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Sage%20Lab/SageLabDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Sage%20Lab/SageLabSnack1.jpg",
+      "category": "food",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Sage%20Lab/SageDrinkSnack1.jpg",
+      "category": "food&drink",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af4f74c7270237c5eaecf32"
+  },
+  "location": {
+    "building": "Pittsburgh Building",
+    "directions": "From front door go straight through the left corridor and it should be there.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.7311595,
+        -73.6833672
+      ]
+    },
+    "disabled_directions": "Same as above.",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Pittsburgh/PittsburghDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Pittsburgh/PittsburghSnack1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af4fa477270237c5eaecf33"
   },
   "location": {
     "building": "West Hall",
-    "directions": "1st floor",
+    "directions": "Take the side entrance by the southeast stairs. Walk up the stairs ahead of you to the 3rd floor. Make a right and the machine is down the hall by the northwest stairs.",
     "geolocation": {
       "type": "Point",
       "coordinates": [
         42.73177,
         -73.68339
       ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
+    },
+    "disabled_directions": "On Sage Avenue, turn onto a road that starts between 2 brick pillars on the north side of West Hall. Make a right when entering West Hall and walk down the hall, make a left where there should be an elevator sign. Then make a right when at the middle of the hallway and enter the elevator. From the elevator, make a right and the machine is to your left in the hallway on the 3rd floor.",
+    "opening_times": [
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ],
+      [
+        "7:00",
+        "23:59"
+      ]
+    ]
   },
   "contents": "drink",
   "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/West%20Hall/WestHallDrink1.JPG",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/West%20Hall/WestHallMap.png"
+},
+{
+  "_id": {
+    "$oid": "6af500147270237c5eaecf34"
+  },
+  "location": {
+    "building": "North Hall",
+    "directions": "The doors are at the front of the building, facing Save Avenue. After walking in, you'll be on the first floor. Head to the middle area of the floor, and you'll find the vending machines.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.73140561688647,
+        -73.67984028673331
+      ]
+    },
+    "disabled_directions": "Same as above",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/North%20Hall/NorthHallDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/North%20Hall/NorthHallSnack1.jpg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af52ab7c5b54e2e99d78c33"
+  },
+  "location": {
+    "building": "Jonsson-Rowland Science Center (JROWL)",
+    "directions": "Go into JROWL through the side entrance near DCC. Go up the stairs to the 3rd floor (2nd level). You will find the vending machines in front of you.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72872,
+        -73.68039
+      ]
+    },
+    "disabled_directions": "",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JROWL/JROWLDrink1.jpeg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JROWL/JROWLSnack1.jpeg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af53165c5b54e2e99d78c34"
+  },
+  "location": {
+    "building": "J Erik Jonsson Engineering Center (JEC)",
+    "directions": "Enter the door on the walkway turn left then turn right towards the design lab (sign posted) continue down the hallway until at The George S. Ansell Lounge. Turn left at the lounge entrance towards hallway (3300-3321). There you will find the vending machine.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72966,
+        -73.68081
+      ]
+    },
+    "disabled_directions": "Same / An elevator is available for those who need access to the 3rd floor if entering from another entrance. Wheel chair ramp to walkway is also available.",
+    "opening_times": [
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JEC/JECDrink1.jpeg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JEC/JECSnack1.jpeg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af534b1c5b54e2e99d78c35"
+  },
+  "location": {
+    "building": "Materials Research Center (MRC)",
+    "directions": "Enter the eastern entrance of the building. Turn left until you reach the lounge area.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.728428,
+        -73.682022
+      ]
+    },
+    "disabled_directions": "Above directions. Alternate route: Enter the main entrance of the Empire State Hall and go through the first door on the right. Head down the ramp until you reach the lounge area in MRC",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "6:00",
+        "18:00"
+      ],
+      [
+        "6:00",
+        "18:00"
+      ],
+      [
+        "6:00",
+        "18:00"
+      ],
+      [
+        "6:00",
+        "18:00"
+      ],
+      [
+        "6:00",
+        "18:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/MRC/MRCDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/MRC/MRCDrink2.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/MRC/MRCSnack1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af53893c5b54e2e99d78c36"
+  },
+  "location": {
+    "building": "Low Center for Industrial Innovation (CII)",
+    "directions": "Enter Lowe through the 3000 level floor. Use the entrance near the RPI Walk-Over Bridge. Once inside go to the end of the lobby towards the door that leads to the stairs. Walk up to the 4000 level floor. From there go forward on the hallway, not to the right (you will see a window at the end of the hallway). Turn right at the end of that hallway and the vending machines will be there in a small room next to the men’s bathroom.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72952,
+        -73.67851
+      ]
+    },
+    "disabled_directions": "Same beginning but use the elevator located in front of the stairs. When exiting the elevator, turn right towards the window. Turn right at the end of that hallway and the vending machines will be there in a small room next to the men’s bathroom.",
+    "opening_times": [
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/LOWE/LOWEDrink1.jpeg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af53bd6c5b54e2e99d78c37"
+  },
+  "location": {
+    "building": "Warren Hall",
+    "directions": "Enter Lowe through the 3000 level floor. Use the entrance near the RPI Walk-Over Bridge. Once inside go to the end of the lobby towards the door that leads to the stairs. Walk up to the 4000 level floor. From there go forward on the hallway, not to the right (you will see a window at the end of the hallway). Turn right at the end of that hallway and the vending machines will be there in a small room next to the men’s bathroom.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.727909,
+        -73.675177
+      ]
+    },
+    "disabled_directions": "Same as above.",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Warren%20Hall/WarrenDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af53d58c5b54e2e99d78c38"
+  },
+  "location": {
+    "building": "Voorhees Computing Center (VCC)",
+    "directions": "Walk through the double doors, first corner room to the left.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.729282,
+        -73.682075
+      ]
+    },
+    "disabled_directions": "Same as above",
+    "opening_times": [
+      [
+        "7:00",
+        "23:00"
+      ],
+      [
+        "7:00",
+        "23:00"
+      ],
+      [
+        "7:00",
+        "23:00"
+      ],
+      [
+        "7:00",
+        "23:00"
+      ],
+      [
+        "7:00",
+        "23:00"
+      ],
+      [
+        "7:00",
+        "20:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Vcc/VccDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Vcc/VccDrink2.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Vcc/VccFood1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af53eafc5b54e2e99d78c39"
+  },
+  "location": {
+    "building": "Academy Hall",
+    "directions": "Enter from the North side of Academy Hall, closest to the Academy Hall Parking Lot. Once inside the building, take a left and open the doors. Keep going until you need to take the first left, and both vending machines are there.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.727537,
+        -73.678635
+      ]
+    },
+    "disabled_directions": "Same as above",
+    "opening_times": [
+      [
+        "",
+        ""
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "7:00",
+        "21:00"
+      ],
+      [
+        "",
+        ""
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Academy%20Hall/AcademyDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Academy%20Hall/AcademySnack1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
+},
+{
+  "_id": {
+    "$oid": "6af6350aa55fe219bd341a3c"
+  },
+  "location": {
+    "building": "Barton Hall",
+    "directions": "Enter Barton Hall through the 3rd floor entrance, go through the door in the main lobby to the stairs. Go to the 2nd floor turn right then turn right again towards the main lobby area. Across the room near the laundry room are the vending machines.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72910694144265,
+        -73.6740802945746
+      ]
+    },
+    "disabled_directions": "After entering the 3rd floor lobby, take the elevator that is located to the left. Once on the 2nd floor go left at the divider towards the main lobby then across the room near the laundry room are the vending machines.",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Barton%20Hall/BartonDrink1.jpeg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Barton%20Hall/BartonSnack1.jpeg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": ""
 }]
