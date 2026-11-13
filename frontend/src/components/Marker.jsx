@@ -92,6 +92,26 @@ function VendingMachineSlider({ machines, onImageLoad }) {
       ) : (
         <p>Image not available</p> // If image failed
       )}
+      <div style={{ display: "flex", width: IMAGE_WIDTH, marginBottom: "10px" }}>
+        <button
+          style={buttonStyle}
+          onClick={() => {}}
+          aria-label="Get directions"
+        >
+          Internal Directions
+        </button>
+        <button
+          style={buttonStyle}
+          onClick={() => {}}
+          aria-label="Report an issue"
+        >
+          <img
+            src="/icons/MenuIcons/alert-triangle-grey.svg"
+            alt="Report Issue"
+            style={{ width: 30, height: 30, display: "block" }}
+          />
+        </button>
+      </div>
       {count > 1 && ( // For more than one image
         <div style={{ display: "flex", width: IMAGE_WIDTH }}>
           <button
