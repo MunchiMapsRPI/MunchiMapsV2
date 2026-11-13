@@ -30,7 +30,7 @@ function MapControls({ onMapKeyClick, onHelpClick, onShowGit }) {
       <button 
         className="control-button map-key-button"
         onClick={handleMapKeyClick}
-        title="Map legend"
+        title="Map Legend"
       >
         <img src="/icons/Map Icons/CookieFull.png" alt="Map Key" className="control-icon" />
       </button>
@@ -38,7 +38,7 @@ function MapControls({ onMapKeyClick, onHelpClick, onShowGit }) {
       <button 
         className="control-button help-button"
         onClick={handleHelpClick}
-        title="How to use"
+        title="How-To Use MunchiMaps"
       >
         <img src="/icons/MenuIcons/help-circle.svg" alt="Help" className="control-icon" />
       </button>
