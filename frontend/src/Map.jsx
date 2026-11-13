@@ -16,6 +16,32 @@ const KONAMI_CODE = [
   'b', 'a',
 ];
 
+const MACHINE_CATEGORIES = new Set(['food', 'drink', 'food&drink']);
+
+function normalizeMachine(machine) {
+  const coordinates = machine.location?.geolocation?.coordinates;
+  const category = machine.contents;
+
+  if (
+    !machine.location?.building ||
+    !Array.isArray(coordinates) ||
+    coordinates.length !== 2 ||
+    !coordinates.every((coordinate) => typeof coordinate === 'number') ||
+    !MACHINE_CATEGORIES.has(category)
+  ) {
+    return null;
+  }
+
+  return {
+    data: machine,
+    id: machine._id,
+    name: machine.location.building,
+    position: coordinates,
+    category,
+    openingTimes: machine.location.opening_times,
+  };
+}
+
 
 function Map() {
   const [vendingMachines, setVendingMachines] = useState([]);
@@ -30,11 +56,11 @@ function Map() {
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
   }, []);
-  const buildings = [...new Set(
-    vendingMachines
-      .map((machine) => machine.location?.building)
-      .filter(Boolean),
-  )];
+  const normalizedMachines = useMemo(
+    () => vendingMachines.map(normalizeMachine).filter(Boolean),
+    [vendingMachines],
+  );
+  const buildings = [...new Set(normalizedMachines.map((machine) => machine.name))];
 
   useEffect(() => {
     fetch('http://localhost:5000/getInfo') // This is your backend server address
@@ -102,19 +128,16 @@ function Map() {
   }, []);
 
   const handleBuildingSelect = (building) => {
-    const machine = vendingMachines.find(
-      (item) => item.location?.building === building,
-    );
-    const coordinates = machine?.location?.geolocation?.coordinates;
+    const machine = normalizedMachines.find((item) => item.name === building);
 
-    if (!machine || !mapRef.current || !Array.isArray(coordinates) || coordinates.length < 2) {
+    if (!machine || !mapRef.current) {
       console.error(`Unable to navigate to building "${building}": coordinates are unavailable.`);
       return;
     }
 
-    const position = [coordinates[0], coordinates[1]];
+    const position = machine.position;
     const map = mapRef.current;
-    const openPopup = () => markerRefs.current[machine._id]?.openPopup();
+    const openPopup = () => markerRefs.current[machine.id]?.openPopup();
 
     map.once('moveend', openPopup);
     map.flyTo(position, 18);
@@ -143,19 +166,14 @@ function Map() {
   };
 
   const nearbyCandidates = useMemo(
-  () =>
-    vendingMachines
-      .filter((m) => m.location?.geolocation?.coordinates)
-      .map((m) => ({
-        id: m._id,
-        name: m.location.building,
-        position: [
-          m.location.geolocation.coordinates[0],
-          m.location.geolocation.coordinates[1],
-        ],
-        openingTimes: m.location.opening_times,
-      })),
-    [vendingMachines]
+    () => normalizedMachines.map(({ id, name, position, category, openingTimes }) => ({
+      id,
+      name,
+      position,
+      category,
+      openingTimes,
+    })),
+    [normalizedMachines],
   );
 
   return (
@@ -172,16 +190,16 @@ function Map() {
             maxZoom={22}
           />
           <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} mapRef={mapRef} markerRefs={markerRefs} />
-          {vendingMachines.map((machine, index) => (
+          {normalizedMachines.map((machine, index) => (
             <VendingMachineMarker
-              key={machine._id ?? index}
-              id={machine._id}
-              machineTypes={machine.contents}
+              key={machine.id ?? index}
+              id={machine.id}
+              machineTypes={machine.category}
               markerRefs={markerRefs}
-              position={[machine.location.geolocation.coordinates[0], machine.location.geolocation.coordinates[1]]}
-              name={machine.location.building}
-              openingTimes={machine.location.opening_times}
-              machines={machine.machines}
+              position={machine.position}
+              name={machine.name}
+              openingTimes={machine.openingTimes}
+              machines={machine.data.machines}
             />
           ))}
         </MapContainer>
