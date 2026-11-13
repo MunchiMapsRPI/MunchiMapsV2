@@ -113,8 +113,16 @@ function Map() {
     }
 
     const position = [coordinates[0], coordinates[1]];
-    mapRef.current.flyTo(position, 18);
-    markerRefs.current[machine._id]?.openPopup();
+    const map = mapRef.current;
+    const openPopup = () => markerRefs.current[machine._id]?.openPopup();
+
+    map.once('moveend', openPopup);
+    map.flyTo(position, 18);
+
+    if (map.getZoom() === 18 && map.getCenter().equals(position)) {
+      map.off('moveend', openPopup);
+      openPopup();
+    }
   };
 
   const handleRecenter = () => {
@@ -156,10 +164,12 @@ function Map() {
         <img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/MunchiMaps%20Logos/MunchiMapsCroppedLogo.png?raw=true" alt="MunchiMaps" />
       </div>
       <div id="map-container" className={rainbow ? 'rainbow' : ''}>
-        <MapContainer ref={mapRef} center={[42.729014, -73.676728]} zoom={15} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
+        <MapContainer ref={mapRef} center={[42.729014, -73.676728]} zoom={17} minZoom={15} maxZoom={22} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            maxNativeZoom={19}
+            maxZoom={22}
           />
           <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} mapRef={mapRef} markerRefs={markerRefs} />
           {vendingMachines.map((machine, index) => (

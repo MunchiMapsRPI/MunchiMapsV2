@@ -20,10 +20,28 @@ function BottomBar({
 }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const searchAreaRef = useRef(null);
   const buildingMatches = getBuildingMatches(buildings, searchQuery);
 
+  useEffect(() => {
+    if (!isSearchOpen) return undefined;
+
+    const handleClickOutside = (event) => {
+      if (searchAreaRef.current && !searchAreaRef.current.contains(event.target)) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isSearchOpen]);
+
   return (
-    <div className="bottom-bar">
+    <div className="bottom-bar" ref={searchAreaRef}>
       <button 
         className="bar-button search-button"
         onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -53,7 +71,9 @@ function BottomBar({
               role="option"
               onClick={() => {
                 setSearchQuery(building);
+                setIsSearchOpen(false);
                 onBuildingSelect(building);
+                setSearchQuery('');
               }}
             >
               {building}
