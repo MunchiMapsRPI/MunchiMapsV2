@@ -8,6 +8,8 @@ import MapControls from './components/MapControls'
 import { UserLocationMarker } from './components/UserLocation'
 import VendingMachineMarker from './components/Marker';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const KONAMI_CODE = [
   'ArrowUp', 'ArrowUp',
   'ArrowDown', 'ArrowDown',
@@ -25,7 +27,7 @@ function Map() {
   const [rainbow, setRainbow] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/') // This is your backend server address
+    fetch(`${API_BASE_URL}/`)
       .then(res => res.text())
       .then(data => setApiStatus(data))
       .catch(err => setApiStatus('Connection failed: ' + err.message));
@@ -37,7 +39,7 @@ function Map() {
   )];
 
   useEffect(() => {
-    fetch('http://localhost:5000/getInfo') // This is your backend server address
+    fetch(`${API_BASE_URL}/getInfo`)
       .then(res => res.json())
       .then(data => setVendingMachines(data))
       .catch(err => console.error('Failed to fetch info:', err));
@@ -86,10 +88,10 @@ function Map() {
           keyBufferRef.current.every((key, i) => key === KONAMI_CODE[i]);
 
         if (matched) {
-          setRainbow((prev) => !prev); 
+          setRainbow((prev) => !prev);
         }
 
-        keyBufferRef.current = []; 
+        keyBufferRef.current = [];
         return;
       }
 
@@ -143,18 +145,18 @@ function Map() {
   };
 
   const nearbyCandidates = useMemo(
-  () =>
-    vendingMachines
-      .filter((m) => m.location?.geolocation?.coordinates)
-      .map((m) => ({
-        id: m._id,
-        name: m.location.building,
-        position: [
-          m.location.geolocation.coordinates[0],
-          m.location.geolocation.coordinates[1],
-        ],
-        openingTimes: m.location.opening_times,
-      })),
+    () =>
+      vendingMachines
+        .filter((m) => m.location?.geolocation?.coordinates)
+        .map((m) => ({
+          id: m._id,
+          name: m.location.building,
+          position: [
+            m.location.geolocation.coordinates[0],
+            m.location.geolocation.coordinates[1],
+          ],
+          openingTimes: m.location.opening_times,
+        })),
     [vendingMachines]
   );
 
@@ -189,12 +191,12 @@ function Map() {
           ))}
         </MapContainer>
       </div>
-      <BottomBar 
+      <BottomBar
         onRecenter={handleRecenter}
         onBuildingSelect={handleBuildingSelect}
         buildings={buildings}
       />
-      <MapControls 
+      <MapControls
         onMapKeyClick={handleMapKeyClick}
         onHelpClick={handleHelpClick}
       />
