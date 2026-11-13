@@ -105,7 +105,19 @@ html, body {
 .help-button{
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 80px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent white */
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  
+  }
+
+.github-button{
+  position: absolute;
+  top: 5px;
+  right: 0px;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent white */
   border: none;

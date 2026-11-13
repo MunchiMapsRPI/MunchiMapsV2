@@ -48,7 +48,7 @@ function MapControls({ onMapKeyClick, onHelpClick, onShowGit }) {
         onClick={handleGitClick}
         title="View GitHub Repository"
       >
-        <img src="/icons/Map Icons/Githublogo.png" alt="GitHub" className="control-icon" />
+        <img src="/icons/Map Icons/Github.png" alt="GitHub" className="control-icon" />
       </button>
 
       {showMapKey && (
