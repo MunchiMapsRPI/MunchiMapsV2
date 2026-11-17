@@ -163,7 +163,7 @@ function Map() {
   return (
     <>
       <div className={'logo-title'}>
-        <img src="https://github.com/mike-cautela/MunchiMaps/blob/main/Website/MunchiMaps%20Assets/MunchiMaps%20Logos/MunchiMapsCroppedLogo.png?raw=true" alt="MunchiMaps" />
+        <img src="/icons/MunchiMaps%20Logos/MunchiMapsCroppedLogo.png" alt="MunchiMaps" />
       </div>
       <div id="map-container" className={rainbow ? 'rainbow' : ''}>
         <MapContainer ref={mapRef} center={[42.729014, -73.676728]} zoom={17} minZoom={15} maxZoom={22} scrollWheelZoom={true} zoomControl={false} style={{ height: "100vh", width: "100%" }}>
