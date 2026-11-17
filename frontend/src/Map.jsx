@@ -49,6 +49,7 @@ function Map() {
   const mapRef = useRef(null);
   const markerRefs = useRef({}); // Store references to markers
   const [rainbow, setRainbow] = useState(false);
+  const [showNearby, setShowNearby] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:5000/') // This is your backend server address
@@ -157,6 +158,10 @@ function Map() {
     }
   };
 
+  const handleFindNearby = () => {
+    setShowNearby(true);
+  };
+
   const handleMapKeyClick = () => {
     console.log('Map key clicked');
   };
@@ -189,7 +194,14 @@ function Map() {
             maxNativeZoom={19}
             maxZoom={22}
           />
-          <UserLocationMarker userLocation={userLocation} machines={nearbyCandidates} mapRef={mapRef} markerRefs={markerRefs} />
+          <UserLocationMarker
+            userLocation={userLocation}
+            machines={nearbyCandidates}
+            mapRef={mapRef}
+            markerRefs={markerRefs}
+            showNearby={showNearby}
+            onNearbyOpened={() => setShowNearby(false)}
+          />
           {normalizedMachines.map((machine, index) => (
             <VendingMachineMarker
               key={machine.id ?? index}
@@ -206,6 +218,7 @@ function Map() {
       </div>
       <BottomBar 
         onRecenter={handleRecenter}
+        onFindNearby={handleFindNearby}
         onBuildingSelect={handleBuildingSelect}
         buildings={buildings}
       />

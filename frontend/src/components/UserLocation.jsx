@@ -1,4 +1,4 @@
-import { useEffect, useMemo} from 'react';
+import { useEffect, useMemo, useRef} from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 
@@ -103,7 +103,15 @@ function UserLocation({ mapRef }) {
 }
 
 // Export the marker component for use in Map
-export function UserLocationMarker({ userLocation, machines, mapRef, markerRefs }) {
+export function UserLocationMarker({
+  userLocation,
+  machines,
+  mapRef,
+  markerRefs,
+  showNearby,
+  onNearbyOpened,
+}) {
+  const userMarkerRef = useRef(null);
   const nearest = useMemo(
     () => getNearestOpenMachines(userLocation, machines, 3),
     [userLocation, machines]
@@ -118,10 +126,17 @@ export function UserLocationMarker({ userLocation, machines, mapRef, markerRefs 
     map.flyTo(m.position, 18);
   };
 
+  useEffect(() => {
+    if (!showNearby || !userMarkerRef.current) return;
+
+    userMarkerRef.current.openPopup();
+    onNearbyOpened();
+  }, [showNearby, onNearbyOpened]);
+
   if (!userLocation) return null;
 
   return (
-    <Marker position={userLocation} icon={blueDotIcon}>
+    <Marker ref={userMarkerRef} position={userLocation} icon={blueDotIcon}>
       <Popup>
         <div>
           <style>{`

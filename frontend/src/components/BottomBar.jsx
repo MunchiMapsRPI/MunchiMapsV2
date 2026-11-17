@@ -15,6 +15,7 @@ function getBuildingMatches(buildings, query) {
 
 function BottomBar({
   onRecenter,
+  onFindNearby,
   onBuildingSelect,
   buildings = [],
 }) {
@@ -88,6 +89,14 @@ function BottomBar({
         title="Recenter to your location"
       >
         <img src="/icons/MenuIcons/crosshair.svg" alt="Recenter" className="button-icon" />
+      </button>
+
+      <button
+        className="bar-button nearby-button"
+        onClick={onFindNearby}
+        title="Find nearby vending machines"
+      >
+        <img src="/icons/MenuIcons/list.svg" alt="Find nearby vending machines" className="button-icon" />
       </button>
     </div>
   );
