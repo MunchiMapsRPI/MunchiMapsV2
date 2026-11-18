@@ -114,6 +114,7 @@ function VendingMachineSlider({ machines, onImageLoad, mapUrl, directions, disab
             alt="Report Issue"
             style={{ width: 30, height: 30, display: "block" }}
           />
+          <strong>Report an Issue</strong>
         </button>
       </div>
       {count > 1 && ( // For more than one image
