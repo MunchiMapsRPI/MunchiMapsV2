@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 const RPIModel = require('./RPI');
 
 const app = express();
@@ -18,11 +19,11 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('Could not connect to database...', err));
 
 // Connection test
-app.get('/', (req, res) => {
+app.get('/api/', (req, res) => {
   res.send('API Server Running');
 })
 
-app.get('/getInfo', async (req, res) => {
+app.get('/api/getInfo', async (req, res) => {
   try {
     const info = await RPIModel.find();
     res.json(info);
@@ -31,6 +32,17 @@ app.get('/getInfo', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch info' });
   }
 })
+
+const FRONTEND_DIST_DIR = path.resolve(
+  __dirname,
+  process.env.FRONTEND_DIST_DIR || '../frontend/dist'
+);
+
+// Serve the Vite build from the configured website directory.
+app.use(express.static(FRONTEND_DIST_DIR));
+app.use((req, res) => {
+  res.sendFile(path.join(FRONTEND_DIST_DIR, 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

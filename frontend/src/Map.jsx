@@ -8,7 +8,7 @@ import MapControls from './components/MapControls'
 import { UserLocationMarker } from './components/UserLocation'
 import VendingMachineMarker from './components/Marker';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = '/api';
 
 const KONAMI_CODE = [
   'ArrowUp', 'ArrowUp',
@@ -25,18 +25,6 @@ function Map() {
   const mapRef = useRef(null);
   const markerRefs = useRef({}); // Store references to markers
   const [rainbow, setRainbow] = useState(false);
-
-  useEffect(() => {
-    fetch(`${API_BASE_URL}/`)
-      .then(res => res.text())
-      .then(data => setApiStatus(data))
-      .catch(err => setApiStatus('Connection failed: ' + err.message));
-  }, []);
-  const buildings = [...new Set(
-    vendingMachines
-      .map((machine) => machine.location?.building)
-      .filter(Boolean),
-  )];
 
   useEffect(() => {
     fetch(`${API_BASE_URL}/getInfo`)
@@ -143,6 +131,16 @@ function Map() {
   const handleHelpClick = () => {
     console.log('Help clicked');
   };
+
+  const buildings = useMemo(
+    () =>
+      [...new Set(
+        vendingMachines
+          .map((machine) => machine.location?.building)
+          .filter(Boolean),
+      )],
+    [vendingMachines]
+  );
 
   const nearbyCandidates = useMemo(
     () =>
