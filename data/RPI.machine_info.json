@@ -1,44 +1,10 @@
 [{
   "_id": {
-    "$oid": "698f9414bf1ed459e6019551"
-  },
-  "location": {
-    "building": "Folsom Library",
-    "directions": "4th floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72954131606436,
-        -73.68250278794625
-      ]
-    }
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "machines": [
-    {
-      "payment": {
-        "accepts": [
-          "Cash",
-          "Card",
-          "Flex",
-          "Coins"
-        ],
-        "info": "Pays back in $5 bills"
-      },
-      "contents": "drink",
-      "working": true,
-      "image": ""
-    }
-  ]
-},
-{
-  "_id": {
     "$oid": "69e7e5b7a4b8a94a89628527"
   },
   "location": {
     "building": "Amos Eaton Hall",
-    "directions": "1st floor directly in front of east door",
+    "directions": "1st floor directly in front of east door.",
     "geolocation": {
       "type": "Point",
       "coordinates": [
@@ -46,7 +12,7 @@
         -73.682406
       ]
     },
-    "disabled_directions": "1st floor directly in front of east door",
+    "disabled_directions": "Inaccessible, however there are 2 relatively short stairs in front of the door.",
     "opening_times": [
       [
         "",
@@ -346,8 +312,8 @@
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.72731130298223,
-        -73.67414636096385
+        42.72743358814458,
+        -73.67410163835017
       ]
     }
   },
@@ -361,99 +327,6 @@
     "info": ""
   },
   "contents": "drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbd6e1206f9199731b24d"
-  },
-  "location": {
-    "building": "Mueller Center",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72891902003062,
-        -73.67684441122128
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebbe741206f9199731b250"
-  },
-  "location": {
-    "building": "PubSafe",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.72930295751444,
-        -73.67676008238502
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "drink",
-  "access": "RPI ID",
-  "working": true,
-  "images": [
-    "https://github.com/MunchiMapsRPI/MunchiMaps/blob/311a96584fc34f4628ab5b30d511695b2b342582/Website/MunchiMaps%20Assets/Amos%20Eaton%20Hall/AmosEatonHallDrink1.jpg"
-  ]
-},
-{
-  "_id": {
-    "$oid": "69ebc1341206f9199731b254"
-  },
-  "location": {
-    "building": "Rensselaer Student Union",
-    "directions": "1st floor",
-    "geolocation": {
-      "type": "Point",
-      "coordinates": [
-        42.7301597619789,
-        -73.67663391678252
-      ]
-    }
-  },
-  "payment": {
-    "accepts": [
-      "Cash",
-      "Card",
-      "Flex",
-      "Coins"
-    ],
-    "info": ""
-  },
-  "contents": "food&drink",
   "access": "RPI ID",
   "working": true,
   "images": [
@@ -642,7 +515,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/BARH/BARHMap.png"
 },
 {
   "_id": {
@@ -826,7 +699,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Sage%20Lab/SageMap.png"
 },
 {
   "_id": {
@@ -910,7 +783,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Pittsburgh/PittsburghMap.png"
 },
 {
   "_id": {
@@ -1078,7 +951,7 @@
         -73.68039
       ]
     },
-    "disabled_directions": "",
+    "disabled_directions": "Enter into JROWL through the west entrance with the ramp. Go across the hallway, there you will find an elevator behind a door with no label next to the entrance to the stairs. Take the elevator to the 2nd floor and there you will find the vending machines.",
     "opening_times": [
       [
         "",
@@ -1146,7 +1019,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JROWL/JROWLBuildingMap.png"
 },
 {
   "_id": {
@@ -1158,8 +1031,8 @@
     "geolocation": {
       "type": "Point",
       "coordinates": [
-        42.72966,
-        -73.68081
+        42.72964,
+        -73.68057
       ]
     },
     "disabled_directions": "Same / An elevator is available for those who need access to the 3rd floor if entering from another entrance. Wheel chair ramp to walkway is also available.",
@@ -1230,7 +1103,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/JEC/JECBuildingMap.png"
 },
 {
   "_id": {
@@ -1330,7 +1203,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/MRC/MRCMap.png"
 },
 {
   "_id": {
@@ -1398,7 +1271,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/LOWE/LOWEBuildingMap.png"
 },
 {
   "_id": {
@@ -1466,7 +1339,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Warren%20Hall/WarrenHallMap.png"
 },
 {
   "_id": {
@@ -1566,7 +1439,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Vcc/VCCMap.png"
 },
 {
   "_id": {
@@ -1650,7 +1523,7 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Academy%20Hall/AcademyHallMap.png"
 },
 {
   "_id": {
@@ -1698,7 +1571,7 @@
       ]
     ]
   },
-  "contents": "drink",
+  "contents": "food&drink",
   "access": "RPI ID",
   "machines": [
     {
@@ -1714,7 +1587,7 @@
       },
       "working": true,
       "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Barton%20Hall/BartonDrink1.jpeg",
-      "category": "drink",
+      "category": "food&drink",
       "contents": []
     },
     {
@@ -1734,5 +1607,593 @@
       "contents": []
     }
   ],
-  "map": ""
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Barton%20Hall/BartonHallMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afcc5b12af556caca7b9485"
+  },
+  "location": {
+    "building": "Hall Hall",
+    "directions": "Enter the main entrance and turn left. Continue all the way down the hallway until you reach the lounge area.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.728897,
+        -73.675306
+      ]
+    },
+    "disabled_directions": "Same as above.",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Hall%20Hall/HallHallDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Hall%20Hall/HallHallMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afcc8932af556caca7b9486"
+  },
+  "location": {
+    "building": "PubSafe",
+    "directions": "Enter the main entrance and turn right.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72923569799981,
+        -73.67712749458354
+      ]
+    },
+    "disabled_directions": "Same as above.",
+    "opening_times": [
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ],
+      [
+        "0:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/PubSafe/PubSafeDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/PubSafe/PubSafeMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afccdfa2af556caca7b9487"
+  },
+  "location": {
+    "building": "Folsom Library",
+    "directions": "Enter from the east side of Folsom Library. Once entered, go straight and keep going until you see the elevator on the left, past the reception desk. Enter the elevator and go to the fourth floor. After, take a right, and another immediate right, and the vending machines should be the right of that.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.729338,
+        -73.682513
+      ]
+    },
+    "disabled_directions": "Enter from the north and south side of Folsom Library (includes ramps for disabled people). Once entered, go straight and keep going until you see the elevator on the left, past the reception desk. Enter the elevator and go to the fourth floor. After, take a right, and another immediate right, and the vending machines should be the right of that.",
+    "opening_times": [
+      [
+        "14:00",
+        "23:59"
+      ],
+      [
+        "7:45",
+        "23:59"
+      ],
+      [
+        "7:45",
+        "23:59"
+      ],
+      [
+        "7:45",
+        "23:59"
+      ],
+      [
+        "7:45",
+        "23:59"
+      ],
+      [
+        "7:45",
+        "18:00"
+      ],
+      [
+        "12:00",
+        "20:00"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Folsom/FolsomDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Folsom/FolsomDrink2.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Folsom/FolsomSnack1.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Folsom/FolsomMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afe1eedc1ceed696fcf11e7"
+  },
+  "location": {
+    "building": "Mueller Center",
+    "directions": "From the North entrance, walk straight ahead until you reach the double doors to the Armory. The vending machine is to your right next to the bathrooms.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72883,
+        -73.67711
+      ]
+    },
+    "disabled_directions": "Same as above.",
+    "opening_times": [
+      [
+        "11:00",
+        "23:00"
+      ],
+      [
+        "8:00",
+        "23:00"
+      ],
+      [
+        "8:00",
+        "23:00"
+      ],
+      [
+        "8:00",
+        "23:00"
+      ],
+      [
+        "8:00",
+        "23:00"
+      ],
+      [
+        "8:00",
+        "21:00"
+      ],
+      [
+        "11:00",
+        "23:00"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Mueller%20Center/MuellerCenterDrink1.JPG",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Mueller%20Center/MuellerCenterSnack1.JPG",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Mueller%20Center/MuellerCenterMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afe3d02a37202acb4badae7"
+  },
+  "location": {
+    "building": "Rensselaer Student Union",
+    "directions": "From the west door down the stairs, turn left, and take the leftmost door, 2 vending machines should be in front of you. To get to the others, go through the rightmost door inside and take the first left, after this to your first left should be a snack machine and second a drink machine, by the women's and men's restrooms respectively.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.730075635751945,
+        -73.67685137383354
+      ]
+    },
+    "disabled_directions": "Same but down the ramp.",
+    "opening_times": [
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ],
+      [
+        "8:00",
+        "23:59"
+      ]
+    ]
+  },
+  "contents": "food&drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Union/UnionDrink1.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Union/UnionDrink2.jpg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Union/UnionSnack1.jpg",
+      "category": "food",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Union/UnionSnack2.jpg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/Union/UnionMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afe428fa37202acb4badae8"
+  },
+  "location": {
+    "building": "WRPI",
+    "directions": "Once up the DCC stairs next to the cafe, turn left until you see a cubby with the bathrooms and a spiral staircase. Go down that spiral staircase and turn right, then turn left, and turn left again at the staircase. Go down it and turn left, then right, at the left of the lockers should be the WRPI radio station. If you go in and look to your left just as you enter, there is the vending machine. (IMPORTANT NOTE: THIS MACHINE ONLY TAKES COINS, AND STATION MAY BE CLOSED)",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72942844537518,
+        -73.67939290867956
+      ]
+    },
+    "disabled_directions": "Enter Lowe entrance and move forwards towards the DCC Cafe. Turn left  here and continue to the end of that hallway. Turn left and on your right should be a freight elevator. Take that all the way down to 1st floor, then turn right, then left, take the second right, at the left of the lockers should be the WRPI radio station. If you go in and look to your left just as you enter, there is the vending machine. (IMPORTANT NOTE: THIS MACHINE ONLY TAKES COINS, AND STATION MAY BE CLOSED)",
+    "opening_times": [
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/WRPI/WRPI.jpg",
+      "category": "drink",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/WRPI/WRPIMap.png"
+},
+{
+  "_id": {
+    "$oid": "6afe63f69e9c49a629378c2f"
+  },
+  "location": {
+    "building": "Darrin Communications Center (DCC)",
+    "directions": " Enter DCC from walkway entrance. Walk across DCC until you reach the stairs at the corner end of the building. Go down the stairs to the 200 level floor, the vending machines will be next to the base of the stairs.",
+    "geolocation": {
+      "type": "Point",
+      "coordinates": [
+        42.72892,
+        -73.67942
+      ]
+    },
+    "disabled_directions": "Enter Lowe entrance and take the elevators in Lowe lobby. Go to the 2nd floor then walk down the hallway until you reach a fork in the road. Take a left and follow the sign that says DCC/JEC Path of travel with an arrow pointin in the right direction. From there continue forward then enter through the door that says 253. There you will find the stairs, but ignore them and continue down the hallway. Then go down the long hallway until you reach a fork in the road, then turn left towards a sign that says DCC/JEC Path of travel for Walkway closure. Then turn left at the next fork towards the DCC exit, where you will find the vending machines next to the stairs on the left.",
+    "opening_times": [
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ],
+      [
+        "6:00",
+        "22:00"
+      ]
+    ]
+  },
+  "contents": "drink",
+  "access": "RPI ID",
+  "machines": [
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/DCC/DCCDrink1.jpeg",
+      "category": "drink",
+      "contents": []
+    },
+    {
+      "payment": {
+        "accepts": [
+          "Cash",
+          "Card",
+          "Flex",
+          "RAD",
+          "Coins"
+        ],
+        "info": ""
+      },
+      "working": true,
+      "image": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/DCC/DCCSnack1.jpeg",
+      "category": "food",
+      "contents": []
+    }
+  ],
+  "map": "https://raw.githubusercontent.com/MunchiMapsRPI/MunchiMapsV2/refs/heads/main/data/images/DCC/DCCMap.png"
 }]
